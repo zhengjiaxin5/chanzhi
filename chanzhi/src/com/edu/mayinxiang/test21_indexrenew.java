@@ -19,7 +19,8 @@ public class test21_indexrenew extends BaseTest{
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[8]/a");
 		webtest.click("xpath=//*[@id=\"execButton\"]");
-//		assertTrue(webtest.isTextPresent("保存"));
-//		
+		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("设置成功"));
 	}
 }

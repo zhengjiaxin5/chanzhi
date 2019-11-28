@@ -18,8 +18,10 @@ public class test1_zhuangtai extends BaseTest{
 		webtest.click("xpath=//*[@id=\"submit\"]");
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"status2\"]");
-		webtest.click("name=submit");
-//		assertTrue(webtest.isTextPresent("保存"));
-//		
+		
+		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
+		webtest.click("id=submit");
+		webtest.open("http://127.0.0.1/chanzhieps/www/");
+		assertTrue(webtest.isTextPresent("站点维护中"));
 	}
 }

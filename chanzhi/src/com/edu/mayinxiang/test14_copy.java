@@ -20,8 +20,9 @@ public class test14_copy extends BaseTest{
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[2]/a");
 		webtest.click("xpath=//*[@id=\"defaultLang2\"]");
 		webtest.click("xpath=//*[@id=\"cn2tw1\"]");
-		webtest.click("name=submit");
-//		assertTrue(webtest.isTextPresent("保存"));
-//		
+		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
+		webtest.click("id=submit");
+		webtest.open("http://127.0.0.1/chanzhieps/www/");
+		assertTrue(webtest.isTextPresent("爲天下企業提供專業的營銷工具"));
 	}
 }

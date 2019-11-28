@@ -18,8 +18,8 @@ public class test18_cache_clear extends BaseTest{
 		webtest.click("xpath=//*[@id=\"submit\"]");
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[6]/a");
-		webtest.click("xpath//*[@id=\"clearButton\"]");
-//		assertTrue(webtest.isTextPresent("±£´æ"));
+		webtest.click("id=clearButton");
+		assertTrue(webtest.isTextPresent("Çå³ýÍê±Ï"));
 //		
 	}
 }

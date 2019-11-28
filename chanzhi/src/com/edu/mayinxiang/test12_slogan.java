@@ -18,8 +18,10 @@ public class test12_slogan extends BaseTest{
 		webtest.click("xpath=//*[@id=\"submit\"]");
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.type("xpath=//*[@id=\"slogan\"]","test test test");
-		webtest.click("name=submit");
-//		assertTrue(webtest.isTextPresent("±£´æ"));
+		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
+		webtest.click("id=submit");
+		webtest.open("http://127.0.0.1/chanzhieps/www/");
+		assertTrue(webtest.isTextPresent("test test test"));
 //		
 	}
 }

@@ -20,8 +20,8 @@ public class test16_address extends BaseTest{
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[4]/a");
 		webtest.type("name=domain", "test");
 		webtest.type("name=alloweDomain", "test");
-		webtest.click("name=submit");
-//		assertTrue(webtest.isTextPresent("保存"));
-//		
+		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("设置成功"));
 	}
 }
