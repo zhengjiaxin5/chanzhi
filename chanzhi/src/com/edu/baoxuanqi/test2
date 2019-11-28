@@ -1,0 +1,18 @@
+package com.webtest.demo;
+
+import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+public class demo2 extends Admin_Login{
+	@Test//��������
+	public void demo2() {
+		webtest.open("http://127.0.0.1/chanzhieps/www/admin.php");
+		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[2]/a");
+		webtest.type("xpath=/html/body","1111");
+		webtest.click("xpath=//*[@id=\"ajaxForm\"]/table/tbody/tr[1]/td/div/div[1]/span[26]/span");
+		
+		webtest.click("xpath=//*[@id=\"ajaxForm\"]/table/tbody/tr[1]/td/div/div[1]/span[46]/span");
+		webtest.click("xpath=/html/body/div[2]/div/div[2]/div[44]");
+		
+		webtest.click("xpath=//*[@id=\"submit\"]");
+			
+}}
