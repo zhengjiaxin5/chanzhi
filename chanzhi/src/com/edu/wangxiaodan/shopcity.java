@@ -27,7 +27,7 @@ public class shopcity extends Admin_Login{
 		if(s==true) {
 			assertTrue(webtest.isTextPresent("不能添加重复的类目"));
 		}else {
-			assertTrue(webtest.isTextPresent("卤煮"));
+			assertTrue(webtest.isTextPresent("保存成功"));
 		}
 		
 		
@@ -37,8 +37,8 @@ public class shopcity extends Admin_Login{
 		testLogin();
 		webtest.click("link=商城");
 		webtest.click("link=产品");
-		webtest.click("xpath=//*[@id='category19']");
-		webtest.click("xpath=/html/body/div/div[2]/div/div/div/a/i");
+		webtest.click("link=卤煮");
+		webtest.click("link=添加产品");
 		webtest.type("xpath=//input[@name='name']", "鸡爪");
 		System.out.println(webtest.isElementPresent("class=ke-edit-iframe"));
 		webtest.enterFrame(1);
@@ -48,7 +48,45 @@ public class shopcity extends Admin_Login{
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click("xpath=//input[@type='submit']");
-		assertTrue(webtest.isTextPresent("油泼面"));
+		assertTrue(webtest.isTextPresent("鸡爪"));
+		
+	}
+	@Test(description="添加名称为空的产品",priority=2)
+	public void test31() {
+		testLogin();
+		webtest.click("link=商城");
+		webtest.click("link=产品");
+		webtest.click("link=卤煮");
+		webtest.click("link=添加产品");
+		System.out.println(webtest.isElementPresent("class=ke-edit-iframe"));
+		webtest.enterFrame(1);
+		webtest.click("tag=body");
+		webtest.type("tag=body", "这是一个鸡爪");
+		webtest.leaveFrame();
+		String js_bottom = "var q=document.documentElement.scrollTop=10000";
+		webtest.runJs(js_bottom);
+		webtest.click("xpath=//input[@type='submit']");
+		assertTrue(webtest.isTextPresent("不能为空"));
+		
+		
+	}
+	@Test(description="添加详情为空的产品",priority=2)
+	public void test32() {
+		testLogin();
+		webtest.click("link=商城");
+		webtest.click("link=产品");
+		webtest.click("link=卤煮");
+		webtest.click("link=添加产品");
+		webtest.type("xpath=//input[@name='name']", "鸡爪");
+		System.out.println(webtest.isElementPresent("class=ke-edit-iframe"));
+//		webtest.enterFrame(1);
+//		webtest.click("tag=body");
+//		webtest.type("tag=body", "这是一个鸡爪");
+//		webtest.leaveFrame();
+		String js_bottom = "var q=document.documentElement.scrollTop=10000";
+		webtest.runJs(js_bottom);
+		webtest.click("xpath=//input[@type='submit']");
+		assertTrue(webtest.isTextPresent("不能为空"));
 		
 	}
 	@Test(description="将鸡爪下架",priority=3)
@@ -158,6 +196,23 @@ public class shopcity extends Admin_Login{
 		webtest.click("xpath=//*[@id='submit']");
 		assertFalse(webtest.isTextPresent("中通"));
 	}
+//	@Test(description="前台创建订单后台更改订单",priority=12)
+//	public void test13() {
+//		webtest.open("http://127.0.0.1:8066/chanzhieps/www/");
+//		webtest.click("link=登录");
+//		webtest.type("name=account","admin");
+//		webtest.type("name=password","admin");
+//		webtest.click("xpath=//input[@type='submit']");
+//		webtest.click("link=产品列表");
+//		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/div[1]/div[1]/section[1]/div[1]/div/a/div");
+//		webtest.click("link=立即购买");
+//		webtest.click("xpath=//*[@id=\"submit\"]");
+//		testLogin();
+//		webtest.click("link=商城");
+//		webtest.click("link=订单");
+//		
+//	}
+	
 	
 }
 

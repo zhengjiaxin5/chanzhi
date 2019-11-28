@@ -55,6 +55,12 @@ public class content extends Admin_Login{
 			assert(webtest.isTextPresent("这是一个title"));
 		}
 	}
+	/**
+	 * 正确的添加一篇文章
+	 * 添加一篇title为空格的文章
+	 * 添加一篇内容为空格的文章
+	 * 
+	 */
 	@DataProvider
 	public Object[][] name1() throws IOException {
 		ExcelDataProvider excelDataProvider=new ExcelDataProvider();
@@ -79,4 +85,41 @@ public class content extends Admin_Login{
 		webtest.click("id=submit");
 		assertTrue(webtest.isTextPresent(asserts));
 	}
+	@Test(description="在目录一下添加一篇title为空的文章")
+	public void test4() {
+		testLogin();
+		webtest.click("link=内容");
+		webtest.click("link=文章");
+		webtest.click("link=目录一");
+		webtest.click("link=发布文章");
+//		webtest.type("id=title", );
+		webtest.enterFrame(0);
+		webtest.click("tag=body");
+		webtest.type("tag=body", "title为空");
+		webtest.leaveFrame();
+		String js_bottom = "var q=document.documentElement.scrollTop=10000";
+		webtest.runJs(js_bottom);
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("不能为空"));
+		
+	}
+	@Test(description="在目录一下添加一篇内容为空的文章")
+	public void test5() {
+		testLogin();
+		webtest.click("link=内容");
+		webtest.click("link=文章");
+		webtest.click("link=目录一");
+		webtest.click("link=发布文章");
+		webtest.type("id=title","内容为空" );
+//		webtest.enterFrame(0);
+//		webtest.click("tag=body");
+//		webtest.type("tag=body", "title为空");
+//		webtest.leaveFrame();
+		String js_bottom = "var q=document.documentElement.scrollTop=10000";
+		webtest.runJs(js_bottom);
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("不能为空"));
+		
+	}
+	
 }
