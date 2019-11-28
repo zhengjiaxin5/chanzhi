@@ -121,5 +121,86 @@ public class content extends Admin_Login{
 		assertTrue(webtest.isTextPresent("不能为空"));
 		
 	}
-	
+	@Test(description="对文章输入内容搜索")
+	public void test6() {
+		testLogin();
+		webtest.click("link=内容");
+		webtest.click("link=文章");
+		webtest.type("id=searchWord", "title");
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("title"));
+	}
+	@Test(description="直接点击搜索")
+	public void test7() {
+		testLogin();
+		webtest.click("link=内容");
+		webtest.click("link=文章");
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("请输入搜索内容"));
+	}
+	@Test(description="添加单页")
+	public void test8() {
+		testLogin();
+		webtest.click("link=内容");
+		webtest.click("link=单页");
+		webtest.click("link=添加单页");
+		webtest.type("id=title", "第一个单页title");
+		webtest.enterFrame(0);
+		webtest.click("tag=body");
+		webtest.type("tag=body", "第一个单页内容");
+		webtest.leaveFrame();
+		String js_bottom = "var q=document.documentElement.scrollTop=10000";
+		webtest.runJs(js_bottom);
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("第一个单页title"));
+	}
+	@Test(description="添加title为空的单页")
+	public void test9() {
+		testLogin();
+		webtest.click("link=内容");
+		webtest.click("link=单页");
+		webtest.click("link=添加单页");
+//		webtest.type("id=title", "第一个单页title");
+		webtest.enterFrame(0);
+		webtest.click("tag=body");
+		webtest.type("tag=body", "第一个单页内容");
+		webtest.leaveFrame();
+		String js_bottom = "var q=document.documentElement.scrollTop=10000";
+		webtest.runJs(js_bottom);
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("不能为空"));
+	}
+	@Test(description="添加内容为空的单页")
+	public void test10() {
+		testLogin();
+		webtest.click("link=内容");
+		webtest.click("link=单页");
+		webtest.click("link=添加单页");
+		webtest.type("id=title", "第二个单页title");
+//		webtest.enterFrame(0);
+//		webtest.click("tag=body");
+//		webtest.type("tag=body", "第一个单页内容");
+//		webtest.leaveFrame();
+		String js_bottom = "var q=document.documentElement.scrollTop=10000";
+		webtest.runJs(js_bottom);
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("第一个单页title"));
+	}
+	@Test(description="对单页输入内容搜索")
+	public void test11() {
+		testLogin();
+		webtest.click("link=内容");
+		webtest.click("link=单页");
+		webtest.type("id=searchWord", "title");
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("title"));
+	}
+	@Test(description="单页直接点击搜索")
+	public void test12() {
+		testLogin();
+		webtest.click("link=内容");
+		webtest.click("link=单页");
+		webtest.click("id=submit");
+		assertTrue(webtest.isTextPresent("请输入搜索内容"));
+	}
 }
