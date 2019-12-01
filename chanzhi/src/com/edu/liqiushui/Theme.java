@@ -52,7 +52,6 @@ public class Theme extends Admin_Login{
 
 	}
 	*/
-	@Test
 	//可视化编辑中改变轮播图顺序
 	@Test(description="改变轮播图顺序")
 	public void test6() {
