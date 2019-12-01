@@ -6,7 +6,7 @@ import com.webtest.demo.Admin_Login;
 
 public class Theme extends Admin_Login{
 	
-	@Test
+	@Test(priority = 1,description="切换主题1")
 	//设计-主题模块
 	public void test1() {
 		testLogin();
@@ -15,6 +15,7 @@ public class Theme extends Admin_Login{
 		webtest.click("/html/body/div/div[2]/div[2]/section[1]/div[1]/div/a/img");//切换为第一个主题
 
 	}
+	@Test(description="切换主题2")
 	public void test2() {
 		testLogin();
 		webtest.click("//a[text()='设计']");
@@ -22,6 +23,7 @@ public class Theme extends Admin_Login{
 		webtest.click("/html/body/div/div[2]/div[2]/section[1]/div[2]/div/a/img");//切换为第二个主题
 
 	}
+	@Test(description="切换主题3")
 	public void test3() {
 		testLogin();
 		webtest.click("//a[text()='设计']");
@@ -29,6 +31,7 @@ public class Theme extends Admin_Login{
 		webtest.click("/html/body/div/div[2]/div[2]/section[1]/div[2]/div/a/img");//切换为第三个主题
 
 	}
+	@Test(description="切换空白主题")
 	public void test4() {
 		testLogin();
 		webtest.click("//a[text()='设计']");
@@ -49,7 +52,9 @@ public class Theme extends Admin_Login{
 
 	}
 	*/
+	@Test
 	//可视化编辑中改变轮播图顺序
+	@Test(description="改变轮播图顺序")
 	public void test6() {
 		testLogin();
 		webtest.click("//a[text()='设计']");
