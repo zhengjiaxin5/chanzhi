@@ -7,17 +7,18 @@ import org.testng.annotations.Test;
 
 
 public class Com_sec extends Admin_Login{
-
+//1
 	@Test(description="获取特效")
 	public void lun() throws InterruptedException {
-		
-		webtest.get("http://127.0.0.1:8011/chanzhieps/www/admin.php?m=ui&f=component");
-		webtest.findElement(By.xpath("/html/body/div/div[1]/div/ul/li[2]/a")).click();
-		webtest.findElement(By.xpath("/html/body/div/div[2]/div/a")).click();
-		webtest.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[3]/div[2]/div/div[1]/a/img")).click();
-		webtest.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div/div[1]/div[1]/div/a[1]")).click();
-		Thread.sleep(2000);
-		
+		webtest.click("link=设计");
+		webtest.click("link=组件");
+		webtest.click("link=特效");
+		webtest.click("xpath=/html/body/div/div[2]/div/a");
+		webtest.click("xpath=//*[@id=\"effect5\"]/a/img");
+		webtest.click("xpath=//*[@id=\"columns\"]/div/div[1]/div[1]/div/a[1]");
+
 	}	
 }
+
+
 
