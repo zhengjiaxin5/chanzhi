@@ -25,7 +25,7 @@ import com.webtest.utils.ReadProperties;
 
 /**
  * author:lihuanzhen
- * ³õÊ¼»¯ä¯ÀÀÆ÷
+ * ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 
 
@@ -67,7 +67,7 @@ public class BaseTest {
 
 	/**
 	 * 
-	 *³õÊ¼»¯ä¯ÀÀÆ÷
+	 *ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 */
 
@@ -80,20 +80,21 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		Log.info(driverType);
 		webtest = new WebDriverEngine(driver);
+
+		}
 	
+
 	
-	
+
+
+	@AfterSuite
+	public void doAfterMethod() {
+		if(this.driver != null){
+			this.driver.quit();
+			}
+		Log.info("Quitted Browser");
 	}
-
-
-//	@AfterSuite
-//	public void doAfterMethod() {
-//		if(this.driver != null){
-//			this.driver.quit();
-//			}
-//		Log.info("Quitted Browser");
-//	}
-//	
+	
 
 	
 

@@ -72,7 +72,7 @@ public class WebTestListener extends TestListenerAdapter {
 		}
 		Map context=new HashMap();
     	context.put("date", new Date());
-        context.put("failedList",failedList);   
+        context.put("failedList",failedList1);   
         context.put("passedList",passedList1); 
         context.put("casesize",passedList.size()+failedList.size()); 
         context.put("failcasesize",failedList.size());
