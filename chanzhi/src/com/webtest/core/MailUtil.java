@@ -18,7 +18,7 @@ import com.webtest.utils.ReadProperties;
 public class MailUtil {
 	static int port = 25;
 	static String server = "smtp.qq.com";
-	static String from = "马寅祥";
+	static String from = "椹瘏绁�";
 //	static String user = "934518049@qq.com";
 //	static String password = "ljdijpduqjxobbfe";
 

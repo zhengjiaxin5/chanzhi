@@ -18,6 +18,6 @@ public class test1_zhuangtai extends Admin_Login{
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
 		webtest.click("id=submit");
 		webtest.open("http://127.0.0.1/chanzhieps/www/");
-		assertTrue(webtest.isTextPresent("123"));
+		assertTrue(webtest.isTextPresent("’æµ„Œ¨ª§÷–"));
 	}
 }

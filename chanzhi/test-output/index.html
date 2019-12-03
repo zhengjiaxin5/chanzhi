@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-s1">
-              <span class="suite-name border-passed">s1</span>
+              <span class="suite-name border-failed">s1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-s1" class="hide-methods failed suite-s1"> (hide)</a> <!-- hide-methods failed suite-s1 -->
+                      <a href="#" panel-name="suite-s1" class="show-methods failed suite-s1"> (show)</a> <!-- show-methods failed suite-s1 -->
+                    </span>
+                    <div class="method-list-content failed suite-s1">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-s1" title="com.edu.mayinxiang.test1_zhuangtai" hash-for-method="test123">test123</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-s1 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,11 +114,6 @@
                       <a href="#" panel-name="suite-s1" class="show-methods passed suite-s1"> (show)</a> <!-- show-methods passed suite-s1 -->
                     </span>
                     <div class="method-list-content passed suite-s1">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-s1" title="com.edu.mayinxiang.test1_zhuangtai" hash-for-method="test">test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-s1" title="com.edu.mayinxiang.test1_zhuangtai" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
@@ -122,19 +131,31 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-s1" class="panel s1">
+          <div class="suite-s1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.edu.mayinxiang.test1_zhuangtai</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test123">
+                  </a> <!-- test123 -->
+                  <span class="method-name">test123</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.edu.mayinxiang.test1_zhuangtai.test123(test1_zhuangtai.java:21)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-s1-class-failed -->
           <div class="suite-s1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.edu.mayinxiang.test1_zhuangtai</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="test">
-                  </a> <!-- test -->
-                  <span class="method-name">test</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="testLogin">
@@ -203,18 +224,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test')
+data.setCell(0, 1, 'testLogin')
 data.setCell(0, 2, 'com.edu.mayinxiang.test1_zhuangtai')
-data.setCell(0, 3, 8248);
+data.setCell(0, 3, 7325);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testLogin')
+data.setCell(1, 1, 'test123')
 data.setCell(1, 2, 'com.edu.mayinxiang.test1_zhuangtai')
-data.setCell(1, 3, 5621);
+data.setCell(1, 3, 6959);
 window.suiteTableData['s1']= { tableData: data, tableDiv: 'times-div-s1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-s1">
               </div> <!-- times-div-s1 -->
             </div> <!-- times-div -->
@@ -247,15 +268,17 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testLogin</span>
-                <span class="method-start">10378 ms</span>
+                <span class="method-start">6514 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test</span>
-                <span class="method-start">16011 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test123</span>
+                <span class="method-start">13842 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">doAfterMethod</span>
-                <span class="method-start">44184 ms</span>
+                <span class="method-start">40744 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
