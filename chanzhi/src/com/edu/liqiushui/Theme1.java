@@ -22,3 +22,4 @@ public class Theme1 extends Admin_Login1{
 		assertTrue(webtest.isTextPresent("…Ë÷√≥…π¶"));
 	}
 }
+//
