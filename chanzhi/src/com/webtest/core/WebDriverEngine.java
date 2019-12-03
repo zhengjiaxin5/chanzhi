@@ -98,7 +98,7 @@ public class WebDriverEngine {
 		return driver.getTitle();
 	}
 
-	private void pause(int time) {
+	public void pause(int time) {
 		if (time <= 0) {
 			return;
 		}
@@ -145,7 +145,7 @@ public class WebDriverEngine {
 		WebElement element = finder.findElement(locator);
 		if (element != null) {
 			element.click();
-			this.pause(3000);
+			this.pause(1000);
 		}
 	}
 
@@ -277,7 +277,7 @@ public class WebDriverEngine {
 	public void rightClickMouse(String locator) throws InterruptedException {
 		action.contextClick(finder.findElement(locator)).perform();
 		}
-	//Tabé”?
+	//Tabï¿½?
 	public void tapClick(){
 	
 		action.sendKeys(Keys.TAB).perform();;
