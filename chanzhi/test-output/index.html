@@ -29,15 +29,15 @@
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
-          <img src="collapseall.gif" class="collapse-all-icon">
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-s1" class="navigator-link">
+            <a href="#" class="navigator-link" panel-name="suite-s1">
               <span class="suite-name border-passed">s1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-s1" class="navigator-link ">
-                    <span>F:\22\freemarker.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-s1">
+                    <span>E:\大三 上\chanzhi\chanzhi\freemarker.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-s1" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="testlist-s1">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-s1" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="group-s1">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-s1" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="times-s1">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-s1" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="reporter-s1">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-s1" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-s1">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-s1" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="chronological-s1">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,8 +101,13 @@
                     </span>
                     <div class="method-list-content passed suite-s1">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-s1" title="com.webtest.demo.demo" class="method navigator-link" hash-for-method="demo">demo</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-s1" title="com.edu.mayinxiang.test1_zhuangtai" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-s1" title="com.edu.mayinxiang.test1_zhuangtai" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-s1 -->
@@ -120,14 +125,23 @@
           <div class="suite-s1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.webtest.demo.demo</span>
+              <span class="class-name">com.edu.mayinxiang.test1_zhuangtai</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="demo">
-                  </a> <!-- demo -->
-                  <span class="method-name">demo</span>
+                  <a name="test">
+                  </a> <!-- test -->
+                  <span class="method-name">test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogin">
+                  </a> <!-- testLogin -->
+                  <span class="method-name">testLogin</span>
+                  <em>
+(鍚庡彴鐧诲綍)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +149,7 @@
         </div> <!-- panel s1 -->
         <div panel-name="test-xml-s1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">F:\22\freemarker.xml</span>
+            <span class="header-content">E:\大三 上\chanzhi\chanzhi\freemarker.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -147,7 +161,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;test1&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.webtest.demo.demo&quot;/&gt;
+      &lt;class name=&quot;com.edu.mayinxiang.test1_zhuangtai&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- test1 --&gt;
 &lt;/suite&gt; &lt;!-- s1 --&gt;
@@ -187,16 +201,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'demo')
-data.setCell(0, 2, 'com.webtest.demo.demo')
-data.setCell(0, 3, 11);
+data.setCell(0, 1, 'test')
+data.setCell(0, 2, 'com.edu.mayinxiang.test1_zhuangtai')
+data.setCell(0, 3, 8248);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testLogin')
+data.setCell(1, 2, 'com.edu.mayinxiang.test1_zhuangtai')
+data.setCell(1, 3, 5621);
 window.suiteTableData['s1']= { tableData: data, tableDiv: 'times-div-s1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 ms</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-s1">
               </div> <!-- times-div-s1 -->
             </div> <!-- times-div -->
@@ -222,11 +240,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.webtest.demo.demo</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">demo</span>
+              <div class="chronological-class-name">com.edu.mayinxiang.test1_zhuangtai</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">doBeforeClass</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testLogin</span>
+                <span class="method-start">10378 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">test</span>
+                <span class="method-start">16011 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">doAfterMethod</span>
+                <span class="method-start">44184 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

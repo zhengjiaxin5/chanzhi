@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package com.edu.mayinxiang;
 
 import static org.testng.Assert.assertTrue;
 
@@ -7,8 +7,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.demo.Admin_Login;
 
-public class Front_Login_Test extends BaseTest{
+public class Front_Login_Test extends Admin_Login{
 
 	@Test
 	public void testLogin() {

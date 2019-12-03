@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package com.edu.mayinxiang;
 
 import static org.testng.Assert.assertTrue;
 
@@ -8,8 +8,9 @@ import org.testng.IInstanceInfo;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.demo.Admin_Login;
 
-public class test6_years extends BaseTest{
+public class test6_years extends Admin_Login{
 	@Test
 	public void test() throws InterruptedException {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");

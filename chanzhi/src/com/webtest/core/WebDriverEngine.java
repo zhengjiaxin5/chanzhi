@@ -148,6 +148,15 @@ public class WebDriverEngine {
 			this.pause(1000);
 		}
 	}
+	
+	public void click1(String locator) {
+
+		WebElement element = finder.findElement(locator);
+		if (element != null) {
+			element.click();
+			this.pause(3000);
+		}
+	}
 
 	public void clickLonger(String locator) {
 
@@ -264,7 +273,7 @@ public class WebDriverEngine {
 	public void mouseoverElement(String locator) throws InterruptedException {
 		action.moveToElement(finder.findElement(locator)).perform();
 	}
-	//切换窗口
+	//鍒囨崲绐楀彛
 	public void switchWidow(int i){
 	    List<String> windows = new ArrayList<String>();
 	    for (String handle : driver.getWindowHandles()) {
@@ -273,11 +282,11 @@ public class WebDriverEngine {
 	    }
 	    driver.switchTo().window(windows.get(i));
 	}
-	//右键
+	//鍙抽敭
 	public void rightClickMouse(String locator) throws InterruptedException {
 		action.contextClick(finder.findElement(locator)).perform();
 		}
-	//Tab�?
+	//Tab锟�?
 	public void tapClick(){
 	
 		action.sendKeys(Keys.TAB).perform();;
@@ -295,6 +304,26 @@ public class WebDriverEngine {
 			windows.add(handle);
 		}
 		driver.switchTo().window(windows.get(i));
+	}
+	
+	public void enter(){
+		
+		action.sendKeys(Keys.ENTER).perform();
+		this.pause(1000);
+	}
+	public void wait1(){
+		
+		
+		this.pause(1000);
+	}
+	public boolean notisTextPresent(String pattern) {
+
+		String text = driver.getPageSource();
+		text = text.trim();
+		if (text.contains(pattern)) {
+			return false;
+		}
+		return true;
 	}
 
 

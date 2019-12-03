@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-11-12T08:45:10Z" name="s1" finished-at="2019-11-12T08:45:10Z" duration-ms="39">
+  <suite name="s1" duration-ms="24271" started-at="2019-12-03T06:41:32Z" finished-at="2019-12-03T06:41:57Z">
     <groups>
     </groups>
-    <test started-at="2019-11-12T08:45:10Z" name="test1" finished-at="2019-11-12T08:45:10Z" duration-ms="39">
-      <class name="com.webtest.demo.demo">
-        <test-method signature="demo()[pri:0, instance:com.webtest.demo.demo@548e6d58]" started-at="2019-11-12T08:45:10Z" name="demo" finished-at="2019-11-12T08:45:10Z" duration-ms="11" status="PASS">
+    <test name="test1" duration-ms="24271" started-at="2019-12-03T06:41:32Z" finished-at="2019-12-03T06:41:57Z">
+      <class name="com.edu.mayinxiang.test1_zhuangtai">
+        <test-method status="PASS" signature="doBeforeClass()[pri:0, instance:com.edu.mayinxiang.test1_zhuangtai@26653222]" name="doBeforeClass" is-config="true" duration-ms="10369" started-at="2019-12-03T06:41:32Z" finished-at="2019-12-03T06:41:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- demo -->
-      </class> <!-- com.webtest.demo.demo -->
+        </test-method> <!-- doBeforeClass -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:com.edu.mayinxiang.test1_zhuangtai@26653222]" name="testLogin" duration-ms="5621" started-at="2019-12-03T06:41:43Z" description="鍚庡彴鐧诲綍" finished-at="2019-12-03T06:41:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.edu.mayinxiang.test1_zhuangtai@26653222]" name="test" duration-ms="8248" started-at="2019-12-03T06:41:48Z" finished-at="2019-12-03T06:41:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="doAfterMethod()[pri:0, instance:com.edu.mayinxiang.test1_zhuangtai@26653222]" name="doAfterMethod" is-config="true" duration-ms="1905" started-at="2019-12-03T06:42:17Z" finished-at="2019-12-03T06:42:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfterMethod -->
+      </class> <!-- com.edu.mayinxiang.test1_zhuangtai -->
     </test> <!-- test1 -->
   </suite> <!-- s1 -->
 </testng-results>

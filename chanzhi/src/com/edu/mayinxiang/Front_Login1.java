@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package com.edu.mayinxiang;
 
 import static org.testng.Assert.assertTrue;
 

@@ -6,12 +6,14 @@
   </listeners>
   <test thread-count="5" name="test1(failed)">
     <classes>
-      <class name="com.webtest.demo.Admin_Login">
+      <class name="com.edu.mayinxiang.test15_language2">
         <methods>
+          <include name="doAfterMethod"/>
           <include name="testLogin"/>
+          <include name="test"/>
           <include name="doBeforeClass"/>
         </methods>
-      </class> <!-- com.webtest.demo.Admin_Login -->
+      </class> <!-- com.edu.mayinxiang.test15_language2 -->
     </classes>
   </test> <!-- test1(failed) -->
 </suite> <!-- Failed suite [s1] -->
