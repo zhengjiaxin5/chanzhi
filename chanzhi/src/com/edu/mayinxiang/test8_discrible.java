@@ -11,11 +11,6 @@ import com.webtest.core.BaseTest;
 public class test8_discrible extends BaseTest{
 	@Test
 	public void test() {
-		webtest.open("http://127.0.0.1/chanzhieps/www/admin.php");
-		//ÎÄ±¾¿òÊäÈë
-		webtest.type("name=account", "admin");
-		webtest.type("name=password", "admin");
-		webtest.click("xpath=//*[@id=\"submit\"]");
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.type("xpath=//*[@id=\"desc\"]","test test test test test");
 		webtest.leaveFrame();
