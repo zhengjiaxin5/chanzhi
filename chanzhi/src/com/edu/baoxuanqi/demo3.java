@@ -16,7 +16,7 @@ public class demo3 extends Admin_Login {
 	}
 
 	@Test(dataProvider = "con1")//商场设置数据驱动
-	public void test18(String param1,String param2) throws Exception {
+	public void test19(String param1,String param2) throws Exception {
 		Thread.sleep(3000);
 		webtest.click("link=商城");
 		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
@@ -27,7 +27,7 @@ public class demo3 extends Admin_Login {
 		webtest.click("id=submit");
 	}
 	@Test//商场设置
-	public void test19() {
+	public void test32() {
 		webtest.click("link=商城");
 		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
 		webtest.type("id=pid", "2088567891011121314");
@@ -35,4 +35,41 @@ public class demo3 extends Admin_Login {
 		webtest.type("name=email","1686977186@qq.com");
 		webtest.click("id=submit");
 	}
+	@Test//商城设置
+	public void test33() {
+		webtest.click("link=商城");
+		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
+		webtest.click("id=currency_chosen");
+		webtest.click("xpath=/html/body/div/div[2]/div/div[2]/form/table/tbody/tr[1]/td[1]/div/div/ul/li[2]");
+		webtest.click("id=stock2");
+		webtest.click("id=submit");
+	}
+	@Test//微信支付
+	public void test34() {
+		webtest.click("link=商城");
+		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
+		webtest.click("id=payment1");
+		webtest.click("id=payment4");
+		webtest.type("id=wechat[appid]", "bao");
+		webtest.type("id=wechat[mch_id]", "123");
+		webtest.type("id=wechat[apikey]","123456");
+		webtest.type("id=wechat[appsecret]","123456789");
+		webtest.click("id=submit");
+		
+	}
+	@Test//微信或支付宝支付
+	public void test35() {
+		webtest.click("link=商城");
+		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
+		webtest.click("id=payment4");
+		webtest.type("id=pid", "2088567891011121314");
+		webtest.type("name=key", "baoxuanqi12345678909876543212345");
+		webtest.type("name=email","1686977186@qq.com");
+		webtest.type("id=wechat[appid]", "bao");
+		webtest.type("id=wechat[mch_id]", "123");
+		webtest.type("id=wechat[apikey]","123456");
+		webtest.type("id=wechat[appsecret]","123456789");
+		webtest.click("id=submit");
+	}
+	
 }
