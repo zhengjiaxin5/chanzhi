@@ -15,19 +15,19 @@ public class Blockk extends Admin_Login1{
 	
 	@DataProvider(name="addblock")
 	public  Object[][] block() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("D:\\demo\\data\\chanzhieps.xlsx","addblock");
+		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","addblock");
 		 return user;
 	}
 	@Test(dataProvider ="addblock",description="区块自定义中添加一个区块")
-	public void addBlock0(String title,String content){
+	public void addBlock0(String title,String moretext){
 		webtest.click("link=设计");
 		webtest.click("link=区块");
 		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//添加
 		
 		webtest.type("name=title", title);
-		
-		webtest.type("xpath=/html/body", content);
-		
+		webtest.typeAndClear("name=title", title);
+		webtest.type("xpath=//*[@id=\"params[moreText]\"]", moretext);
+		webtest.typeAndClear("xpath=//*[@id=\"params[moreText]\"]", moretext);
 		
 		webtest.click("id=submit");
 		assertTrue(webtest.isTextPresent("保存成功"));

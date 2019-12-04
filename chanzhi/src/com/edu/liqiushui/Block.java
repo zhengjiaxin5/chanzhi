@@ -12,7 +12,8 @@ public class Block extends Admin_Login1{
 		webtest.click("link=设计");
 		webtest.click("link=区块");
 		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//添加
-		webtest.type("id=title","这是一个区块");//名称填写
+		webtest.type("id=title","这是一个区块啊");//名称填写
+		webtest.typeAndClear("xpath=//*[@id=\"params[moreText]\"]","右上角");//添加更多连接
 		webtest.click("id=submit");
 		Thread.sleep(5000);
 		assertTrue(webtest.isTextPresent("保存成功"));
