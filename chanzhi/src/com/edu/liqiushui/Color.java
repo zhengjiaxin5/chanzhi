@@ -11,11 +11,11 @@ import com.webtest.dataprovider.ExcelDataProvider;
 import com.webtest.demo.Admin_Login;
 
 public class Color extends Admin_Login1{
-//	@DataProvider(name="color")
-//	public  Object[][] changesize() throws IOException{
-//		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\color.xlsx","color");
-//		 return user;
-//	}
+	@DataProvider(name="color")
+	public  Object[][] changesize() throws IOException{
+		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","color");
+		 return user;
+	}
 
 	@Test(dataProvider ="color",description="添加有颜色区块")
 	public void color0(String icon,String border,String top,String right,String bottom,String left,String title,String background,String text,String link,String back) {
