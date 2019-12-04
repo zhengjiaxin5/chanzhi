@@ -1,4 +1,4 @@
-package com.webtest.chanzhiepsProject;
+package com.edu.gengyifan;
 
 import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
