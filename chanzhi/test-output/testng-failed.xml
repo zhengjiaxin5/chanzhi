@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="test1(failed)">
     <classes>
-      <class name="com.edu.mayinxiang.test1_zhuangtai">
+      <class name="com.edu.yanxiaoqian.Test2">
         <methods>
-          <include name="test123"/>
           <include name="doAfterMethod"/>
+          <include name="testZcxy1"/>
           <include name="doBeforeClass"/>
         </methods>
-      </class> <!-- com.edu.mayinxiang.test1_zhuangtai -->
+      </class> <!-- com.edu.yanxiaoqian.Test2 -->
     </classes>
   </test> <!-- test1(failed) -->
 </suite> <!-- Failed suite [s1] -->

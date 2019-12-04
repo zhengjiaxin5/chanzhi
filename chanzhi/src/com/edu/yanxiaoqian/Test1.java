@@ -1,16 +1,13 @@
-package com.webtest.demo;
+package com.edu.yanxiaoqian;
 
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.demo.Admin_Login;
 
-public class Test1 extends BaseTest{
+public class Test1  extends Admin_Login{
 	@Test
 	public void testBz() {
-		webtest.open("http://localhost/chanzhieps/www/admin.php");
-		webtest.type("xpath=//*[@id=\"account\"]", "yanxiaoqian");
-		webtest.type("xpath=//*[@id=\"password\"]", "123456");
-		webtest.click("xpath=//*[@id=\"submit\"]");
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[9]/a");
 		webtest.click("xpath=//*[@id=\"backupBtn\"]");

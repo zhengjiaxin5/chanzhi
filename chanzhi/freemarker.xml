@@ -7,7 +7,7 @@
 
 	<test name="test1">
 			<classes>
-			<class name="com.edu.mayinxiang.test1_zhuangtai" />
+			<class name="com.edu.yanxiaoqian.Test2" />
 		</classes>
 	</test>
 	
