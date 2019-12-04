@@ -1,6 +1,8 @@
 package com.edu.zhengjiaxin;
 
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.By;
 
 import org.testng.annotations.Test;
@@ -16,8 +18,7 @@ public class Com_Creategroup extends Admin_Login{
 		webtest.click("xpath=/html/body/div/div[3]/div/div[2]/section/div[2]/a/div/div/i");
 		webtest.type("xpath=//*[@id=\"name\"]","admin");
 		webtest.click("xpath=//*[@id=\"submit\"]");
-		
-		
+		assertTrue(webtest.isTextPresent("设置成功"));
 
 	}	
 }

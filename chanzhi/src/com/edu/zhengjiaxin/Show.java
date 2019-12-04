@@ -24,9 +24,8 @@ import com.google.common.io.Files;
 
 public class Show extends Admin_Login{
 //8
-	@Test(description="显示设置1",priority = 0)
+	@Test(description="显示设置1")
 	public void show0() throws InterruptedException {
-		//webtest.open("http://127.0.0.1:8011/chanzhieps/www/admin.php?m=ui&f=others");
 		webtest.click("link=设计");
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[6]/ul/li[6]/a");
 		webtest.click("xpath=//*[@id=\"QRCode1\"]");

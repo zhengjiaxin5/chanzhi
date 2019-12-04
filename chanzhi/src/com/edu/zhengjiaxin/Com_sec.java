@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 
 import org.testng.annotations.Test;
 
-
 public class Com_sec extends Admin_Login{
 //1
 	@Test(description="获取特效")

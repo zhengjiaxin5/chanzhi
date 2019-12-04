@@ -20,6 +20,7 @@ public class PicManage extends Admin_Login{
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[6]/ul/li[6]/a");
 		webtest.click("link=图片水印");
 		webtest.click("xpath=//*[@id=\"files[watermark]2\"]");
+		
 		webtest.click("xpath=//*[@id=\"submit\"]");	
 		assertTrue(webtest.isTextPresent("设置成功"));
 	}
