@@ -25,7 +25,7 @@ public class demo2 extends Admin_Login{
 		assertTrue(webtest.isTextPresent("保存成功"));
 }
 	
-	/*@Test//熊掌号勾选2
+	@Test//熊掌号勾选2
 	public void test3() {
 	webtest.click("link=推广");
 	webtest.click("link=熊掌号");
@@ -55,6 +55,6 @@ public class demo2 extends Admin_Login{
 		webtest.click("xpath=//*[@id=\"type\"]/option[2]");
 		webtest.click("id=submit");
 		assertTrue(webtest.isTextPresent("保存成功"));
-	}*/
+	}
 }
 
