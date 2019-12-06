@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.webtest.dataprovider.ExcelDataProvider;
 import com.webtest.demo.Admin_Login;
 
-public class Blockk extends Admin_Login1{
+public class AddBlock extends Admin_Login1{
 	
 	
 	@DataProvider(name="addblock")
