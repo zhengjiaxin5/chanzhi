@@ -13,7 +13,7 @@ import com.webtest.demo.Admin_Login;
 
 public class Test2 extends Admin_Login{
 	WebDriver WebDriver = null;
-	@Test(description="登录协议关闭")
+	@Test(description="注册协议关闭")
 	public void testZcxy1() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[10]/a");
@@ -21,7 +21,7 @@ public class Test2 extends Admin_Login{
 		webtest.click("xpath=//*[@id=\"submit\"]");
 		assertTrue(webtest.isTextPresent("设置成功"));
 	}
-	@Test(description="登录协议开启")
+	@Test(description="注册协议开启")
 	public void testZcxy2() throws InterruptedException {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[10]/a");

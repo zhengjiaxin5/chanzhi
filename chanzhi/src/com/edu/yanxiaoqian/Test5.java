@@ -8,7 +8,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class Test5 extends Admin_Login{
-	@Test
+	@Test(description="¿ª·ÅµÇÂ¼Î¢²©")
 	public void testGsxx() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[3]/a");
