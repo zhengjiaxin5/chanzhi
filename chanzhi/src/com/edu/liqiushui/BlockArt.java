@@ -20,7 +20,7 @@ public class BlockArt extends Admin_Login1{
 		 return user;
 	}
 	
-	@Test(dataProvider ="article",description="区块自定义中添加一个区块")
+	@Test(dataProvider ="article",description="最新文章中添加一个区块")
 	public void test(String title,String limit,String moretext,String moreurl) throws InterruptedException {
 		webtest.click("link=设计");
 		webtest.click("link=区块");
@@ -35,8 +35,8 @@ public class BlockArt extends Admin_Login1{
 		webtest.typeAndClear("id=params[limit]",limit );
 		webtest.type("xpath=//*[@id=\"params[moreText]\"]",moretext);//添加更多连接
 		webtest.typeAndClear("xpath=//*[@id=\"params[moreText]\"]",moretext);//添加更多连接
-		webtest.type("id=params[moreUrl]",moreurl );
-		webtest.typeAndClear("id=params[moreUrl]",moreurl );
+		webtest.type("id=params[moreUrl]",moreurl);
+		webtest.typeAndClear("id=params[moreUrl]",moreurl);
 		webtest.click("id=submit");
 		Thread.sleep(5000);
 		assertTrue(webtest.isTextPresent("保存成功"));
