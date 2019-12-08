@@ -26,16 +26,6 @@ public class Admin_Login  extends BaseTest{
 
 	
 		}
-//	@Test
-//	public void testLogin() {
-//		//��ҳ��
-//		webtest.open("http://localhost:8032/mymovie/admin.php/");
-//		//�ı�������
-//		webtest.type("name=username", "admin");
-//		webtest.type("name=password", "admin");
-//		webtest.click("xpath=//input[@type='submit']");
-//		
-//		
-//	}
+
 
 }

@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import com.webtest.core.BaseTest;
 import com.webtest.utils.ReadProperties;
 
+
 public class Front_Login extends BaseTest {
 	@Test(description="前台登录")
 	public void FrontLogin() throws IOException {

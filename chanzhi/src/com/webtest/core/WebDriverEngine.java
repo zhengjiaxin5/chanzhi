@@ -1,30 +1,20 @@
 package com.webtest.core;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import com.webtest.utils.Log;
-import com.webtest.utils.ReadProperties;
 /**
  * author:lihuanzhen
  
@@ -34,7 +24,57 @@ public class WebDriverEngine {
 	WebDriver driver = null;
 	ElementFinder finder = null;
 	Actions action  =null;
+	
+	public void addWhiteListIP() throws UnknownHostException {
+		backgroundLogin("137554616","fcschalke04");
+		click("xpath=/html/body/div[1]/div[1]/div/ul/li[4]/a");
+		type("id=ip", InetAddress.getLocalHost().getHostAddress().toString());
+		type("id=password", "fcschalke04");
+		click("id=submit");
+	}
+	
+	public void addWhiteListAccount() {
+		backgroundLogin("137554616","fcschalke04");
+		click("xpath=/html/body/div[1]/div[1]/div/ul/li[4]/a");
+		type("id=account", "demo");
+		type("id=password", "fcschalke04");
+		click("id=submit");
+	}
 
+	public void frontLogin(String account,String password) {
+		open("http://localhost/chanzhieps/www/index.php/user-login.html");
+		type("id=account", account);
+		type("id=password", password);
+		click("id=submit");
+	}
+	
+	public void backgroundLogin(String account,String password) {
+		open("http://localhost/chanzhieps/www/admin.php?m=admin&f=index");
+		type("xpath=//*[@id=\"account\"]", account);
+		type("xpath=//*[@id=\"password\"]", password);
+		click("id=submit");
+
+		click("xpath=/html/body/nav[1]/ul[1]/li[8]/a");
+		click("xpath=//html/body/nav[2]/div[2]/ul[1]/li[4]/a");
+	}
+	
+	public void testCloseSafety() {
+		backgroundLogin("137554616","fcschalke04");
+		click("xpath=/html/body/div[1]/div[2]/div/div[2]/form/table/tbody/tr[1]/td/label[3]");
+		click("xpath=//*[@id=\"checkEmail2\"]");
+		click("xpath=/html/body/div[1]/div[2]/div/div[2]/form/table/tbody/tr[6]/td[1]/label[2]");
+		click("id=submit");
+	}
+
+	public String isDisplayed(String locator,boolean ture) {
+
+		WebElement element = finder.findElement(locator);
+		if (element != null) {
+			System.out.println(element.isDisplayed());
+			return "ture";
+		}
+		return "flase";
+	}
 	
 	public String[] getAllWindowTitles() {
 		// TODO Auto-generated method stub

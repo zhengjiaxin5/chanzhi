@@ -4,6 +4,8 @@ package com.edu.zhengjiaxin;
 import org.testng.annotations.Test;
 
 
+
+
 public class LogoUpload extends Admin_Login{
 //1
 	@Test(description="上传logo")

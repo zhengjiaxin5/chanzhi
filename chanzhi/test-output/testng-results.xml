@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
@@ -26,4 +27,37 @@
       </class> <!-- com.edu.mayinxiang.test31_forumsetup -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="s1" duration-ms="31860" started-at="2019-12-04T00:31:29Z" finished-at="2019-12-04T00:32:00Z">
+    <groups>
+    </groups>
+    <test name="test1" duration-ms="31860" started-at="2019-12-04T00:31:29Z" finished-at="2019-12-04T00:32:00Z">
+      <class name="com.edu.yanxiaoqian.Test2">
+        <test-method status="PASS" signature="doBeforeClass()[pri:0, instance:com.edu.yanxiaoqian.Test2@59fa1d9b]" name="doBeforeClass" is-config="true" duration-ms="4274" started-at="2019-12-04T00:31:29Z" finished-at="2019-12-04T00:31:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doBeforeClass -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:com.edu.yanxiaoqian.Test2@59fa1d9b]" name="testLogin" duration-ms="6815" started-at="2019-12-04T00:31:33Z" description="鍚庡彴鐧诲綍" finished-at="2019-12-04T00:31:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="testZcxy1()[pri:0, instance:com.edu.yanxiaoqian.Test2@59fa1d9b]" name="testZcxy1" duration-ms="5023" started-at="2019-12-04T00:31:40Z" finished-at="2019-12-04T00:31:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZcxy1 -->
+        <test-method status="PASS" signature="testZcxy2()[pri:0, instance:com.edu.yanxiaoqian.Test2@59fa1d9b]" name="testZcxy2" duration-ms="15733" started-at="2019-12-04T00:31:45Z" finished-at="2019-12-04T00:32:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZcxy2 -->
+        <test-method status="PASS" signature="doAfterMethod()[pri:0, instance:com.edu.yanxiaoqian.Test2@59fa1d9b]" name="doAfterMethod" is-config="true" duration-ms="862" started-at="2019-12-04T00:32:20Z" finished-at="2019-12-04T00:32:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfterMethod -->
+      </class> <!-- com.edu.yanxiaoqian.Test2 -->
+    </test> <!-- test1 -->
+  </suite> <!-- s1 -->
+>>>>>>> 42266362d0c01c10b287194cb497f6492544b894
 </testng-results>

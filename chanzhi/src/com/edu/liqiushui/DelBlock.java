@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.webtest.demo.Admin_Login;
 
-public class Block extends Admin_Login1{
+public class DelBlock extends Admin_Login{
 	@Test(priority = 1,description="区块自定义中添加一个区块")
 	public void test9() throws InterruptedException {
 		webtest.click("link=设计");
