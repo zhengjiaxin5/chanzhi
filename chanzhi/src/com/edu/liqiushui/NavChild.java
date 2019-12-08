@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.webtest.dataprovider.ExcelDataProvider;
 import com.webtest.demo.Admin_Login;
 
-public class NavChild extends Admin_Login1{
+public class NavChild extends Admin_Login{
 
 	//添加一个导航a
 	@Test(priority=1,description="先添加一个导航")

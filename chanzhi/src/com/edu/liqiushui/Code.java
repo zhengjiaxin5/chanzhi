@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.webtest.dataprovider.ExcelDataProvider;
 import com.webtest.demo.Admin_Login;
 
-public class Code extends Admin_Login1{
+public class Code extends Admin_Login{
 	
 	@DataProvider(name="code")
 	public  Object[] code() throws IOException{

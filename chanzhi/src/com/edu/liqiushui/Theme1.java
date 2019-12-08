@@ -7,8 +7,9 @@ import javax.xml.xpath.XPath;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.demo.Admin_Login;
 
-public class Theme1 extends Admin_Login1{
+public class Theme1 extends Admin_Login{
 	@Test(description="切换主题1")
 	public void test2() {
 		webtest.click("link=设计");

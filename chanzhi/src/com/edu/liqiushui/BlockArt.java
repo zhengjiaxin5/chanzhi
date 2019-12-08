@@ -11,12 +11,11 @@ import com.webtest.demo.Admin_Login;
 
 
 
-public class BlockArt extends Admin_Login1{
-	
+public class BlockArt extends Admin_Login{
 	
 	@DataProvider(name="article")
 	public  Object[][] article() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","article");
+		Object[][] user= new ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","article");
 		 return user;
 	}
 	
@@ -29,14 +28,10 @@ public class BlockArt extends Admin_Login1{
 		webtest.click("link=最新文章");
 		
 		//数据驱动
-		webtest.type("id=title",title);
 		webtest.typeAndClear("id=title",title);
 		webtest.type("id=params[limit]",limit );
-		webtest.typeAndClear("id=params[limit]",limit );
 		webtest.type("xpath=//*[@id=\"params[moreText]\"]",moretext);//添加更多连接
-		webtest.typeAndClear("xpath=//*[@id=\"params[moreText]\"]",moretext);//添加更多连接
 		webtest.type("id=params[moreUrl]",moreurl);
-		webtest.typeAndClear("id=params[moreUrl]",moreurl);
 		webtest.click("id=submit");
 		Thread.sleep(5000);
 		assertTrue(webtest.isTextPresent("保存成功"));

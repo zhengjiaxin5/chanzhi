@@ -6,8 +6,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.demo.Admin_Login;
 
-public class ProductCategory  extends Admin_Login1{
+public class ProductCategory  extends Admin_Login{
 	
 	@Test(description="添加产品分类类区块第一种选择")
 	public void Product111() {

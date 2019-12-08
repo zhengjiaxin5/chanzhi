@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.webtest.dataprovider.ExcelDataProvider;
 import com.webtest.demo.Admin_Login;
 
-public class DelNav extends Admin_Login1{
+public class DelNav extends Admin_Login{
 
 	@Test(priority=1,description="Ìí¼Óµ¼º½")
 	public void test1() throws InterruptedException {
