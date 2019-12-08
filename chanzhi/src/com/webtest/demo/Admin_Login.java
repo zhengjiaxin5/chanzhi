@@ -19,23 +19,13 @@ public class Admin_Login  extends BaseTest{
 		ReadProperties u=new ReadProperties();
 		String url=u.getPropertyValue("base_url");
 		webtest.open(url);
-		webtest.type("name=account", "yanxiaoqian");
-		webtest.type("name=password", "123456");
+		webtest.type("name=account", "admin");
+		webtest.type("name=password", "admin");
 		webtest.click("xpath=//*[@id=\"submit\"]");
 		
 
 	
 		}
-//	@Test
-//	public void testLogin() {
-//		//��ҳ��
-//		webtest.open("http://localhost:8032/mymovie/admin.php/");
-//		//�ı�������
-//		webtest.type("name=username", "admin");
-//		webtest.type("name=password", "admin");
-//		webtest.click("xpath=//input[@type='submit']");
-//		
-//		
-//	}
+
 
 }
