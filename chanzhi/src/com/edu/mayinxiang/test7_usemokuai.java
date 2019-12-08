@@ -10,7 +10,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test7_usemokuai extends Admin_Login{
-	@Test
+	@Test(description="用户模块的增加删除")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"modules3\"]");
@@ -21,7 +21,7 @@ public class test7_usemokuai extends Admin_Login{
 //		
 	}
 	
-	@Test
+	@Test(description="用户模块的增加和删除")
 	public void test2() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"modules1\"]");

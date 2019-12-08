@@ -10,7 +10,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test1_zhuangtai extends Admin_Login{
-	@Test
+	@Test(description="ÍøÕ¾×´Ì¬µÄÇÐ»»")
 	public void test123() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"status2\"]");

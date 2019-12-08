@@ -11,7 +11,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test6_years extends Admin_Login{
-	@Test
+	@Test(description="网站创建年份的更改")
 	public void test() throws InterruptedException {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.type("xpath=//*[@id=\"copyright\"]","2999");

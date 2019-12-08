@@ -11,7 +11,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test13_language extends Admin_Login{
-	@Test
+	@Test(description="ÍøÕ¾Ä¬ÈÏÓïÑÔµÄÇĞ»»")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[2]/a");

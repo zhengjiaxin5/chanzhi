@@ -11,7 +11,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test26_vipedit extends Admin_Login{
-	@Test
+	@Test(description="»áÔ±µÄ±à¼­")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[4]/a");
 		webtest.click("xpath=//*[@id=\"userList\"]/tbody/tr[1]/td[11]/a[1]");

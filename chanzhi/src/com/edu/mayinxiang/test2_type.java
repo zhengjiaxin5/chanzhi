@@ -11,7 +11,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test2_type extends Admin_Login{
-	@Test
+	@Test(description="ÍøÕ¾ÀàĞÍ")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"type2\"]");

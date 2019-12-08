@@ -1,23 +1,30 @@
-<div style="font-size:12px">×Ô¶¯»¯²âÊÔ±¨¸æ-----${date?string("yyyy-MM-dd HH:mm:ss")}
-<br/>±¾´Î¹²ÔËĞĞ×Ô¶¯»¯case:${casesize}¸ö£¬ÆäÖĞFAIL:${failcasesize}¸ö
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div style="font-size:12px">è‡ªåŠ¨åŒ–æµ‹è¯•æŠ¥å‘Š-----${date?string("yyyy-MM-dd HH:mm:ss")}
+	<br/>æœ¬æ¬¡å…±è¿è¡Œè‡ªåŠ¨åŒ–case:${casesize}ä¸ªï¼Œå…¶ä¸­FAIL:${failcasesize}ä¸ª
 
-<br/>
-<br/>
-<div>
-  <table width="100%"  border="1" cellspacing="0"  style="font-size:12px; font-family:'MS Serif', 'New York', serif;">
+	<br/>
+	<br/>
+	<div>
+ 	 <table width="100%"  border="1" cellspacing="0"  style="font-size:12px; font-family:'MS Serif', 'New York', serif;">
   
   
-   <!-- Ê§°ÜcaseÁĞ±í-->
+   <!-- å¤±è´¥caseåˆ—è¡¨-->
   <#if failedList?size gt 0>
    <tr   height="40">
-    <th  colspan="4" align="left" nowrap bgcolor="#66CC33"   scope="col"><div style="color:red; ">ÒÔÏÂcaseÖ´ĞĞÊ§°Ü£º</div>
+    <th  colspan="4" align="left" nowrap bgcolor="#66CC33"   scope="col"><div style="color:red; ">ä»¥ä¸‹caseæ‰§è¡Œå¤±è´¥ï¼š</div>
     </th>
   </tr>
   <tr bgcolor="#FFCC66" height="35">
-    <th  width="8%"  nowrap scope="col">ĞòºÅ</th>
+    <th  width="8%"  nowrap scope="col">åºå·</th>
     <th  width="15%"    scope="col">test method</th>
     <th  width="45%"   nowrap scope="col">case title</th>
-    <th    nowrap scope="col">²âÊÔ½áÂÛ</th>
+    <th    nowrap scope="col">æµ‹è¯•ç»“è®º</th>
   </tr>
 
   <#list failedList as case>
@@ -32,16 +39,16 @@
   </#list>
   </#if>
   
-  <!--³É¹¦caseÁĞ±í-->
+  <!--æˆåŠŸcaseåˆ—è¡¨-->
   <#if (passedList?size gt 0)>
   <tr   height="40">
-    <th  colspan="4" align="left" nowrap bgcolor="#66CC33"   scope="col">ÒÔÏÂcaseÖ´ĞĞ³É¹¦</th>
+    <th  colspan="4" align="left" nowrap bgcolor="#66CC33"   scope="col">ä»¥ä¸‹caseæ‰§è¡ŒæˆåŠŸ</th>
   </tr>
   <tr bgcolor="#FFCC66" height="35">
-    <th  width="8%" nowrap  scope="col">ĞòºÅ</th>
+    <th  width="8%" nowrap  scope="col">åºå·</th>
     <th  width="15%"    scope="col">test method</th>
     <th  width="45%"   nowrap scope="col">case title</th>
-    <th    nowrap scope="col">²âÊÔ½áÂÛ</th>
+    <th    nowrap scope="col">æµ‹è¯•ç»“è®º</th>
   </tr>
 
   <#list passedList as case>
@@ -58,3 +65,5 @@
 
 </table>
 </div>
+</body>
+</html>

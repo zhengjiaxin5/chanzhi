@@ -14,7 +14,7 @@ public class Admin_Login  extends BaseTest{
 	
 	
 
-	@Test(description="后台登录")
+	@Test(description="��¼")
 	public void testLogin() throws IOException {
 		ReadProperties u=new ReadProperties();
 		String url=u.getPropertyValue("base_url");

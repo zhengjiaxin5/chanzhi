@@ -12,7 +12,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test14_copy extends Admin_Login{
-	@Test
+	@Test(description="繁体->简体内容的拷贝")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[2]/a");

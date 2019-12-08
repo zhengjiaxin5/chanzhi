@@ -15,10 +15,11 @@ import javax.mail.internet.MimeMessage;
 import com.webtest.utils.ReadProperties;
 
 
+
 public class MailUtil {
 	static int port = 25;
 	static String server = "smtp.qq.com";
-	static String from = "椹瘏绁�";
+	static String from = "马寅祥";
 //	static String user = "934518049@qq.com";
 //	static String password = "ljdijpduqjxobbfe";
 
@@ -61,7 +62,7 @@ public class MailUtil {
 	}
 
 	public static void main(String args[]) throws UnsupportedEncodingException {
-		MailUtil.sendEmail("438117595@qq.com", "123", "1");
+		MailUtil.sendEmail("934518049@qq.com", "123", "1");
 	}
 
 }
