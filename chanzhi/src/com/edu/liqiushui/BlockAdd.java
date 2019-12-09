@@ -15,7 +15,7 @@ public class BlockAdd extends Admin_Login{
 	
 	@DataProvider(name="addblock")
 	public  Object[][] block() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","addblock");
+		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps1.xlsx","addblock");
 		 return user;
 	}
 	@Test(dataProvider ="addblock",description="区块自定义中添加一个区块")

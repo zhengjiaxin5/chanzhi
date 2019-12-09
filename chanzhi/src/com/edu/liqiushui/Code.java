@@ -13,7 +13,7 @@ public class Code extends Admin_Login{
 	
 	@DataProvider(name="code")
 	public  Object[] code() throws IOException{
-		Object[] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","code");
+		Object[] user= new  ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps1.xlsx","code");
 		 return user;
 	}
 	//添加html、css、javascript代码

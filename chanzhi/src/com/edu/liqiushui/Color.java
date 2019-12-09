@@ -13,7 +13,7 @@ import com.webtest.demo.Admin_Login;
 public class Color extends Admin_Login{
 	@DataProvider(name="color")
 	public  Object[][] changesize() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","color");
+		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps1.xlsx","color");
 		 return user;
 	}
 

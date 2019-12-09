@@ -15,7 +15,7 @@ public class BlockArt extends Admin_Login{
 	
 	@DataProvider(name="article")
 	public  Object[][] article() throws IOException{
-		Object[][] user= new ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","article");
+		Object[][] user= new ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps1.xlsx","article");
 		 return user;
 	}
 	

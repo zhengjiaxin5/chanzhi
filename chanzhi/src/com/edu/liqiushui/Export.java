@@ -13,7 +13,7 @@ import com.webtest.demo.Admin_Login;
 public class Export extends Admin_Login{
 	@DataProvider(name="export")
 	public  Object[][] export() throws IOException{
-		Object[][] user= new ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","export");
+		Object[][] user= new ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps1.xlsx","export");
 		 return user;
 	}
 	
