@@ -12,18 +12,18 @@ public class Login_Action {
 	  {
 	
 		  if(is_login()) {
-			  webtest.click("link=ÍË³ö");
+			  webtest.click("link=é€€å‡º");
 		  }
-			webtest.click("link=µÇÂ¼");
+			webtest.click("link=ç™»å½•");
 			webtest.type("name=username", email);
 			webtest.type("name=password", password);
-			webtest.click("xpath=//input[@value='ÂíÉÏµÇÂ¼']");
+			webtest.click("xpath=//input[@value='é©¬ä¸Šç™»å½•']");
 		
 	  }
 	  
 	  public boolean is_login()
 	  {
-		  return webtest.isElementPresent("link=ÍË³ö");
+		  return webtest.isElementPresent("link=é€€å‡º");
 	  }
 	  
 	  

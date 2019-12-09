@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import com.google.common.io.Files;
 /**
  * author:lihaunzhen
- * ½ØÆÁÀà
+ * æˆªå±ç±»
  */
 public class SeleniumScreenShot {
     public WebDriver driver;
