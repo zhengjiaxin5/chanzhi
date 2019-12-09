@@ -10,16 +10,16 @@ public class FilterIPVerificationCode extends BaseTest{
 	@Test
 	public void testFilterIPVerificationCode() {
 		webtest.addWhiteListAccount();
-		//´ò¿ªÒ³Ãæ
+		//æ‰“å¼€é¡µé¢
 		webtest.open("http://localhost/chanzhieps/www/index.php/user-login.html");
-		//Ñ­»·ÊäÈëÕËºÅÃÜÂëºÍ´íÎóµÄÑéÖ¤Âë
+		//å¾ªç¯è¾“å…¥è´¦å·å¯†ç å’Œé”™è¯¯çš„éªŒè¯ç 
 		webtest.type("account", "demo");
 		webtest.type("password", "demo");
 		webtest.type("xpath=/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[2]/form/div[4]", "1");
 		for (int i = 0; i < 4; i++) {
 			webtest.click("id=submit");
 		}
-		//Ñ­»·ÊäÈëÕËºÅÃÜÂëºÍ´íÎóµÄÑéÖ¤Âë
+		//å¾ªç¯è¾“å…¥è´¦å·å¯†ç å’Œé”™è¯¯çš„éªŒè¯ç 
 		webtest.open("http://localhost/chanzhieps/www/index.php/user-login.html");
 		webtest.type("account", "demo0");
 		webtest.type("password", "demo");
@@ -27,7 +27,7 @@ public class FilterIPVerificationCode extends BaseTest{
 		for (int i = 0; i < 2; i++) {
 			webtest.click("id=submit");
 		}
-		//¶ÏÑÔ
-		assertTrue(webtest.isTextPresent("ÏµÍ³¼ì²âµ½ÄúµÄĞĞÎª´æÔÚÒì³£"));
+		//æ–­è¨€
+		assertTrue(webtest.isTextPresent("ç³»ç»Ÿæ£€æµ‹åˆ°æ‚¨çš„è¡Œä¸ºå­˜åœ¨å¼‚å¸¸"));
 	}
 }

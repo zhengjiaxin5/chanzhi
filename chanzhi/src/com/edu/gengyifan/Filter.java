@@ -12,8 +12,8 @@ public class Filter extends BaseTest{
 		webtest.backgroundLogin("137554616", "fcschalke04");
 		webtest.click("xpath=//*[@id=\"filterFunction1\"]");
 		webtest.click("id=submit");
-		//¶ÏÑÔ
+		//æ–­è¨€
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
-		assertTrue(webtest.isTextPresent("±£´æ³É¹¦"));
+		assertTrue(webtest.isTextPresent("ä¿å­˜æˆåŠŸ"));
 	}
 }
