@@ -8,7 +8,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class Test9 extends Admin_Login{
-	@Test(description="¿ª·ÅµÇÂ¼Î¢ĞÅ¹Ø±Õ×Ô¶¯µÇÂ¼")
+	@Test(description="å¼€æ”¾ç™»å½•å¾®ä¿¡å…³é—­è‡ªåŠ¨ç™»å½•")
 	public void testGsxx1() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[3]/a");
@@ -16,10 +16,10 @@ public class Test9 extends Admin_Login{
 		webtest.type("xpath=/html/body/div/div[2]/div/div[5]/div/div[2]/form/table/tbody/tr[2]/td/input", "!");
 		webtest.click("xpath=/html/body/div/div[2]/div/div[5]/div/div[2]/form/table/tbody/tr[3]/td/label[2]/input");
 		webtest.click("xpath=/html/body/div/div[2]/div/div[5]/div/div[2]/form/table/tbody/tr[4]/td/input[1]");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 	}
 	
-	@Test(description="¿ª·ÅµÇÂ¼Î¢ĞÅ¿ªÆô×Ô¶¯µÇÂ¼")
+	@Test(description="å¼€æ”¾ç™»å½•å¾®ä¿¡å¼€å¯è‡ªåŠ¨ç™»å½•")
 	public void testGsxx2() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[3]/a");
@@ -27,7 +27,7 @@ public class Test9 extends Admin_Login{
 		webtest.type("xpath=/html/body/div/div[2]/div/div[5]/div/div[2]/form/table/tbody/tr[2]/td/input", "!");
 		webtest.click("xpath=/html/body/div/div[2]/div/div[5]/div/div[2]/form/table/tbody/tr[3]/td/label[1]/input");
 		webtest.click("xpath=/html/body/div/div[2]/div/div[5]/div/div[2]/form/table/tbody/tr[4]/td/input[1]");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 	}
 
 }

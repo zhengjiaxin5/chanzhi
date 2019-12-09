@@ -7,52 +7,52 @@ import org.testng.annotations.Test;
 import com.webtest.demo.Admin_Login;
 
 public class Test11 extends Admin_Login{
-	@Test(description="蝉知首页发布文章跳转")
+	@Test(description="铦夌煡棣栭〉鍙戝竷鏂囩珷璺宠浆")
 	public void testGsxx1() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"widget5\"]/div[2]/div/a[1]");
-		assertTrue(webtest.isTextPresent("发布文章"));
+		assertTrue(webtest.isTextPresent("鍙戝竷鏂囩珷"));
 	}
 	
-	@Test(description="蝉知首页添加产品跳转")
+	@Test(description="铦夌煡棣栭〉娣诲姞浜у搧璺宠浆")
 	public void testGsxx2() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"widget5\"]/div[2]/div/a[2]");
-		assertTrue(webtest.isTextPresent("添加产品"));
+		assertTrue(webtest.isTextPresent("娣诲姞浜у搧"));
 	}
 	
-	@Test(description="蝉知首页处理反馈跳转")
+	@Test(description="铦夌煡棣栭〉澶勭悊鍙嶉璺宠浆")
 	public void testGsxx3() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"widget5\"]/div[2]/div/a[3]");
-		assertTrue(webtest.isTextPresent("处理反馈"));
+		assertTrue(webtest.isTextPresent("澶勭悊鍙嶉"));
 	}
 	
-	@Test(description="蝉知首页站点设置跳转")
+	@Test(description="铦夌煡棣栭〉鍏徃淇℃伅璺宠浆")
 	public void testGsxx4() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"widget5\"]/div[2]/div/a[4]");
-		assertTrue(webtest.isTextPresent("基本信息设置"));
+		assertTrue(webtest.isTextPresent("鍏徃淇℃伅"));
 	}
 	
-	@Test(description="蝉知首页公司信息跳转")
+	@Test(description="铦夌煡棣栭〉鑱旂郴鏂瑰紡璺宠浆")
 	public void testGsxx5() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"widget5\"]/div[2]/div/a[5]");
-		assertTrue(webtest.isTextPresent("公司信息"));
+		assertTrue(webtest.isTextPresent("鑱旂郴鏂瑰紡"));
 	}
 	
-	@Test(description="蝉知首页联系方式跳转")
+	@Test(description="锟斤拷知锟斤拷页锟斤拷系锟斤拷式锟斤拷转")
 	public void testGsxx6() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[1]/a");
 		webtest.click("xpath=//*[@id=\"widget5\"]/div[2]/div/a[6]");
-		assertTrue(webtest.isTextPresent("联系方式"));
+		assertTrue(webtest.isTextPresent("锟斤拷系锟斤拷式"));
 	}
 
 }

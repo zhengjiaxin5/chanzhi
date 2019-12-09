@@ -6,7 +6,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class Test1  extends Admin_Login{
-	@Test(description="设置备份还原")
+	@Test(description="璁剧疆澶囦唤杩樺師")
 	public void testBz() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[9]/a");

@@ -13,15 +13,15 @@ import com.webtest.demo.Admin_Login;
 
 public class Test2 extends Admin_Login{
 	WebDriver WebDriver = null;
-	@Test(description="×¢²áĞ­Òé¹Ø±Õ")
+	@Test(description="æ³¨å†Œåè®®å…³é—­")
 	public void testZcxy1() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[10]/a");
 		webtest.click("xpath=//*[@id=\"agreement2\"]");
 		webtest.click("xpath=//*[@id=\"submit\"]");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 	}
-	@Test(description="×¢²áĞ­Òé¿ªÆô")
+	@Test(description="æ³¨å†Œåè®®å¼€å¯")
 	public void testZcxy2() throws InterruptedException {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[10]/a");
@@ -34,10 +34,10 @@ public class Test2 extends Admin_Login{
 		webtest.type("tag=body", "bbbbbb");
 		webtest.leaveFrame();
 		webtest.click("xpath=//*[@id=\"submit\"]");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 		Thread.sleep(3000);
 		webtest.open("http://localhost/chanzhieps/www/index.php/user-register.html");
-		assertTrue(webtest.isTextPresent("ÎÒÒÑ¾­ÖªÏş²¢Í¬Òâ"));
+		assertTrue(webtest.isTextPresent("æˆ‘å·²ç»çŸ¥æ™“å¹¶åŒæ„"));
 	}
 
 }

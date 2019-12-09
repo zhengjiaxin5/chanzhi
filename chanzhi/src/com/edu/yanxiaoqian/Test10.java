@@ -8,24 +8,24 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class Test10 extends Admin_Login{
-	@Test(description="ÉèÖÃ¸ñÊ½´íÎóµÄ·¢ĞÅÓÊÏä")
+	@Test(description="è®¾ç½®æ ¼å¼é”™è¯¯çš„å‘ä¿¡é‚®ç®±")
 	public void testGsxx1() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[3]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[2]/a");
 		webtest.type("xpath=//*[@id=\"fromAddress\"]", "111");
 		webtest.click("xpath=//*[@id=\"submit\"]");
-		assertTrue(webtest.isTextPresent("·¢ĞÅÓÊÏäÓ¦µ±ÎªºÏ·¨µÄEMAIL"));
+		assertTrue(webtest.isTextPresent("å‘ä¿¡é‚®ç®±åº”å½“ä¸ºåˆæ³•çš„EMAIL"));
 	}
 	
-	@Test(description="ÉèÖÃ¸ñÊ½ÕıÈ·µÄ·¢ĞÅÓÊÏä")
+	@Test(description="è®¾ç½®æ ¼å¼æ­£ç¡®çš„å‘ä¿¡é‚®ç®±")
 	public void testGsxx2() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[3]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[2]/a");
 		webtest.type("xpath=//*[@id=\"fromAddress\"]", "438117595@qq.com");
 		webtest.click("xpath=//*[@id=\"submit\"]");
-		assertTrue(webtest.isTextPresent("·¢ĞÅÓÊÏä"));
+		assertTrue(webtest.isTextPresent("å‘ä¿¡é‚®ç®±"));
 		webtest.click("xpath=//*[@id=\"submit\"]");
 	}
 	

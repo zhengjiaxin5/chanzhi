@@ -8,7 +8,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class Test4 extends Admin_Login{
-	@Test(description="添加联系方式")
+	@Test(description="娣诲姞鑱旂郴鏂瑰紡式")
 	public void testGsxx() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[2]/a");
@@ -24,7 +24,7 @@ public class Test4 extends Admin_Login{
 		webtest.type("xpath=//*[@id=\"site\"]", "!");
 		webtest.type("xpath=//*[@id=\"address\"]", "!");
 		webtest.click("xpath=//*[@id=\"submit\"]");
-		assertTrue(webtest.isTextPresent("设置成功"));
+		assertTrue(webtest.isTextPresent("璁剧疆鎴愬姛"));
 	}
 
 }

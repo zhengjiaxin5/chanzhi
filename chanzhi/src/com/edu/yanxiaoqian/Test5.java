@@ -8,7 +8,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class Test5 extends Admin_Login{
-	@Test(description="¿ª·ÅµÇÂ¼Î¢²©")
+	@Test(description="å¼€æ”¾ç™»å½•å¾®åš")
 	public void testGsxx() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[3]/a");
@@ -18,7 +18,7 @@ public class Test5 extends Admin_Login{
 		webtest.type("xpath=//*[@id=\"clientSecret\"]", "!");
 		webtest.type("xpath=//*[@id=\"widget\"]", "!");
 		webtest.click("xpath=//*[@id=\"submit\"]");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 	}
 
 }
