@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package com.edu.baoxuanqi;
 
 import static org.testng.Assert.assertTrue;
 
@@ -6,6 +6,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.webtest.dataprovider.ExcelDataProvider;
+import com.webtest.demo.Admin_Login;
 
 public class demo2 extends Admin_Login{
 	@DataProvider(name = "con2")
@@ -13,10 +14,10 @@ public class demo2 extends Admin_Login{
 		ExcelDataProvider d = new ExcelDataProvider();
 		return d.getTestDataByExcel("E:\\exc2.xlsx", "Sheet1");
 	}
-	@Test(dataProvider = "con2")//熊掌号勾选1
+	@Test(dataProvider = "con2",description="熊掌号勾选产品")
 	public void test2(String a1,String a2,String a3) throws Exception{
 		webtest.click("link=推广");
-		webtest.click("link=熊掌号");
+		webtest.click("link=熊掌号"); 
 		webtest.type("id=name", a1);
 		webtest.type("id=appID",a2);
 		webtest.type("id=token", a3);
@@ -25,7 +26,7 @@ public class demo2 extends Admin_Login{
 		assertTrue(webtest.isTextPresent("保存成功"));
 }
 	
-	@Test//熊掌号勾选2
+	@Test(description="熊掌号勾选博客")
 	public void test3() {
 	webtest.click("link=推广");
 	webtest.click("link=熊掌号");
@@ -36,7 +37,7 @@ public class demo2 extends Admin_Login{
 	webtest.click("id=submit");
 	assertTrue(webtest.isTextPresent("保存成功"));
 }
-	@Test//熊掌号勾选3
+	@Test(description="熊掌号勾选单页")
 	public void test4() {
 	webtest.click("link=推广");
 	webtest.click("link=熊掌号");
@@ -47,7 +48,7 @@ public class demo2 extends Admin_Login{
 	webtest.click("id=submit");
 	assertTrue(webtest.isTextPresent("保存成功"));
 	}
-	@Test//熊掌号设置
+	@Test(description="熊掌号更换类型")
 	public void test18() {
 		webtest.click("link=推广");
 		webtest.click("link=熊掌号");
@@ -57,4 +58,9 @@ public class demo2 extends Admin_Login{
 		assertTrue(webtest.isTextPresent("保存成功"));
 	}
 }
+
+
+	
+
+
 
