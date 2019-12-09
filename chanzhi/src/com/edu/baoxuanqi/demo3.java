@@ -1,4 +1,12 @@
-package com.webtest.demo;
+package com.edu.baoxuanqi;
+
+import static org.testng.Assert.assertTrue;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.webtest.dataprovider.ExcelDataProvider;
+import com.webtest.demo.Admin_Login;
 
 import static org.testng.Assert.assertTrue;
 
@@ -15,10 +23,10 @@ public class demo3 extends Admin_Login {
 		return d.getTestDataByExcel("E:\\exc1.xlsx", "Sheet1");
 	}
 
-	@Test(dataProvider = "con1")//ÉÌ³¡ÉèÖÃÊı¾İÇı¶¯
+	@Test(dataProvider = "con1",description="ç¡®è®¤æ”¶è´§æ—¶æœŸå’Œè®¢å•è¿‡æœŸæ—¶é—´")
 	public void test19(String param1,String param2) throws Exception {
 		Thread.sleep(3000);
-		webtest.click("link=ÉÌ³Ç");
+		webtest.click("link=å•†åŸ");
 		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
 		Thread.sleep(3000);
 		webtest.type("id=confirmLimit", param1);
@@ -26,27 +34,27 @@ public class demo3 extends Admin_Login {
 		Thread.sleep(3000);
 		webtest.click("id=submit");
 	}
-	@Test//ÉÌ³¡ÉèÖÃ
+	@Test(description="å¡«å†™æ”¯ä»˜å®å‚æ•°")
 	public void test32() {
-		webtest.click("link=ÉÌ³Ç");
+		webtest.click("link=å•†åŸ");
 		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
 		webtest.type("id=pid", "2088567891011121314");
 		webtest.type("name=key", "baoxuanqi12345678909876543212345");
 		webtest.type("name=email","1686977186@qq.com");
 		webtest.click("id=submit");
 	}
-	@Test//ÉÌ³ÇÉèÖÃ
+	@Test(description="å•†åŸè®¾ç½®æ›´æ”¹è´§å¸")
 	public void test33() {
-		webtest.click("link=ÉÌ³Ç");
+		webtest.click("link=å•†åŸ");
 		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
 		webtest.click("id=currency_chosen");
 		webtest.click("xpath=/html/body/div/div[2]/div/div[2]/form/table/tbody/tr[1]/td[1]/div/div/ul/li[2]");
 		webtest.click("id=stock2");
 		webtest.click("id=submit");
 	}
-	@Test//Î¢ĞÅÖ§¸¶
+	@Test(description="å¡«å†™å¾®ä¿¡æ”¯ä»˜å‚æ•°")
 	public void test34() {
-		webtest.click("link=ÉÌ³Ç");
+		webtest.click("link=å•†åŸ");
 		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
 		webtest.click("id=payment1");
 		webtest.click("id=payment4");
@@ -57,9 +65,9 @@ public class demo3 extends Admin_Login {
 		webtest.click("id=submit");
 		
 	}
-	@Test//Î¢ĞÅ»òÖ§¸¶±¦Ö§¸¶
+	@Test(description="å¡«å†™å¾®ä¿¡æˆ–æ”¯ä»˜å®æ”¯ä»˜å‚æ•°")
 	public void test35() {
-		webtest.click("link=ÉÌ³Ç");
+		webtest.click("link=å•†åŸ");
 		webtest.click("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
 		webtest.click("id=payment4");
 		webtest.type("id=pid", "2088567891011121314");
