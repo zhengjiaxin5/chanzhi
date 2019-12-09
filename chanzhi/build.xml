@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <project name ="chanzhi" default="run" basedir=".">
 	
+
 	 <!-- 定义全局变量 -->
 	<property name="dest" value="./build/classes" />
 	<property name="testng.output.dir" value="./test-output"/>
