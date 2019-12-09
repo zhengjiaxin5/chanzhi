@@ -1,54 +1,66 @@
 package com.edu.liqiushui;
 
+
+
 import static org.testng.Assert.assertTrue;
+
+
 
 import javax.xml.xpath.XPath;
 
+
+
 import org.testng.annotations.Test;
+
+
 
 import com.webtest.core.BaseTest;
 
-public class Theme1 extends Admin_Login1{
-	@Test(description="ÇĞ»»Ö÷Ìâ1")
+import com.webtest.demo.Admin_Login;
+
+public class Theme extends Admin_Login{
+	@Test(description="åˆ‡æ¢ä¸»é¢˜1")
 	public void test2() {
-		webtest.click("link=Éè¼Æ");
+		webtest.click("link=è®¾è®¡");
 		webtest.click("xpath=//*[@id=\"internalSection\"]/div[1]/div/a/img");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 	}
-	@Test(description="ÇĞ»»Ö÷Ìâ2")
+	@Test(description="åˆ‡æ¢ä¸»é¢˜2")
 	public void test3() {
-		webtest.click("link=Éè¼Æ");
+		webtest.click("link=è®¾è®¡");
 		webtest.click("xpath=//*[@id=\"internalSection\"]/div[2]/div/a/img");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 		
 	}
-	@Test(description="ÇĞ»»Ö÷Ìâ3")
+	@Test(description="åˆ‡æ¢ä¸»é¢˜3")
 	public void test4() {
-		webtest.click("link=Éè¼Æ");
+		webtest.click("link=è®¾è®¡");
 		webtest.click("xpath=//*[@id=\"internalSection\"]/div[3]/div/a/img");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
-		
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 	}
-	@Test(description="ÇĞ»»Ö÷Ìâ4")
+	@Test(description="åˆ‡æ¢ä¸»é¢˜4")
 	public void test5() {
-		webtest.click("link=Éè¼Æ");
+		webtest.click("link=è®¾è®¡");
 		webtest.click("xpath=//*[@id=\"internalSection\"]/div[4]/div/a/img");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 		
 	}
-	@Test(description="ÇĞ»»¿Õ°×Ö÷Ìâ")
+	@Test(description="åˆ‡æ¢ç©ºç™½ä¸»é¢˜")
 	public void test6() {
-		webtest.click("link=Éè¼Æ");
+		webtest.click("link=è®¾è®¡");
 		webtest.click("xpath=//*[@id=\"internalSection\"]/div[5]/div/a/img");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 		
 	}
-	@Test(description="×Ô¶¨ÒåÖ÷ÌâÒ³Ãæ")
+	@Test(description="è‡ªå®šä¹‰ä¸»é¢˜é¡µé¢")
 	public void test7() {
-		webtest.click("link=Éè¼Æ");
+		webtest.click("link=è®¾è®¡");
 		webtest.click("xpath=//*[@id=\"internalSection\"]/div[5]/div/a/img");
 		webtest.click("xpath=//*[@id=\"internalSection\"]/div[5]/div/div[2]/a");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
+
 		
+
 	}
+
 }

@@ -15,7 +15,7 @@ public class ListManage extends Admin_Login{
 	@Test(description="列表设置")
 	@DataProvider(name="listm")
 	public  Object[][] getchanzhiepsData() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("D:\\demo\\data\\listm.xlsx","listm");
+		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\listm.xlsx","listm");
 		 return user;
 	}
 

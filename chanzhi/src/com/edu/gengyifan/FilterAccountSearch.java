@@ -17,7 +17,7 @@ public class FilterAccountSearch extends BaseTest{
 		for(int i=0;i<11;i++) {
 		webtest.type("id=words", "1");
 		}
-		//¶ÏÑÔ
-		assertTrue(webtest.isTextPresent("ÏµÍ³¼ì²âµ½ÄúµÄÐÐÎª´æÔÚÒì³£"));
+		//æ–­è¨€
+		assertTrue(webtest.isTextPresent("ç³»ç»Ÿæ£€æµ‹åˆ°æ‚¨çš„è¡Œä¸ºå­˜åœ¨å¼‚å¸¸"));
 	}
 }

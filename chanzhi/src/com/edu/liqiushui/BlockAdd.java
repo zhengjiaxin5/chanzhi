@@ -10,19 +10,19 @@ import org.testng.annotations.Test;
 import com.webtest.dataprovider.ExcelDataProvider;
 import com.webtest.demo.Admin_Login;
 
-public class AddBlock extends Admin_Login1{
+public class BlockAdd extends Admin_Login{
 	
 	
 	@DataProvider(name="addblock")
 	public  Object[][] block() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","addblock");
+		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps1.xlsx","addblock");
 		 return user;
 	}
-	@Test(dataProvider ="addblock",description="Çø¿é×Ô¶¨ÒåÖĞÌí¼ÓÒ»¸öÇø¿é")
+	@Test(dataProvider ="addblock",description="åŒºå—è‡ªå®šä¹‰ä¸­æ·»åŠ ä¸€ä¸ªåŒºå—")
 	public void addBlock0(String title,String moretext){
-		webtest.click("link=Éè¼Æ");
-		webtest.click("link=Çø¿é");
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
+		webtest.click("link=è®¾è®¡");
+		webtest.click("link=åŒºå—");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
 		
 		webtest.type("name=title", title);
 		webtest.typeAndClear("name=title", title);
@@ -30,7 +30,7 @@ public class AddBlock extends Admin_Login1{
 		webtest.typeAndClear("xpath=//*[@id=\"params[moreText]\"]", moretext);
 		
 		webtest.click("id=submit");
-		assertTrue(webtest.isTextPresent("±£´æ³É¹¦"));
+		assertTrue(webtest.isTextPresent("ä¿å­˜æˆåŠŸ"));
 	}
 	
 	
@@ -44,11 +44,11 @@ public class AddBlock extends Admin_Login1{
 	
 	
 	/*
-	@Test(priority = 2,description="É¾³ıÒ»¸öÇø¿é")
+	@Test(priority = 2,description="åˆ é™¤ä¸€ä¸ªåŒºå—")
 	public void test10() throws InterruptedException {
-		webtest.mouseoverElement("xpath=/html/body/div/div[2]/div[1]/div/div[2]/span[1]");//Êó±ê·ÅÔÚ¸ÃÇø¿éÉÏ
+		webtest.mouseoverElement("xpath=/html/body/div/div[2]/div[1]/div/div[2]/span[1]");//é¼ æ ‡æ”¾åœ¨è¯¥åŒºå—ä¸Š
 		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[2]/span[1]/a[2]/i");
-		webtest.click("xpath=/html/body/div[2]/div/div/div[2]/button[1]");//µã»÷È·ÈÏ
+		webtest.click("xpath=/html/body/div[2]/div/div/div[2]/button[1]");//ç‚¹å‡»ç¡®è®¤
 	}
 	*/
 	

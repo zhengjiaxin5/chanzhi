@@ -6,100 +6,101 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.demo.Admin_Login;
 
-public class ProductCategory  extends Admin_Login1{
+public class ProductCategory  extends Admin_Login{
 	
-	@Test(description="Ìí¼Ó²úÆ··ÖÀàÀàÇø¿éµÚÒ»ÖÖÑ¡Ôñ")
+	@Test(description="æ·»åŠ äº§å“åˆ†ç±»ç±»åŒºå—ç¬¬ä¸€ç§é€‰æ‹©")
 	public void Product111() {
-		webtest.click("link=Éè¼Æ");
-		webtest.click("link=Çø¿é");
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=²úÆ··ÖÀà");
-		webtest.typeAndClear("id=title","µÚ1¸ö");
+		webtest.click("link=è®¾è®¡");
+		webtest.click("link=åŒºå—");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=äº§å“åˆ†ç±»");
+		webtest.typeAndClear("id=title","ç¬¬1ä¸ª");
 		webtest.click("id=params[showChildren]1");
 		webtest.click("id=params[initialExpand]1");
 		webtest.click("id=params[fromCurrent]1");
 		webtest.click("id=submit");
 	}
-	@Test(description="Ìí¼Ó²úÆ··ÖÀàÀàÇø¿éµÚ¶şÖÖÑ¡Ôñ")
+	@Test(description="æ·»åŠ äº§å“åˆ†ç±»ç±»åŒºå—ç¬¬äºŒç§é€‰æ‹©")
 	public void Product112() {
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=²úÆ··ÖÀà");
-		webtest.typeAndClear("id=title","µÚ2¸ö");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=äº§å“åˆ†ç±»");
+		webtest.typeAndClear("id=title","ç¬¬2ä¸ª");
 		webtest.click("id=params[showChildren]1");
 		webtest.click("id=params[initialExpand]1");
 		webtest.click("id=params[fromCurrent]2");
 		webtest.click("id=submit");
 	}
-	@Test(description="Ìí¼Ó²úÆ··ÖÀàÀàÇø¿éµÚÈıÖÖÑ¡Ôñ")
+	@Test(description="æ·»åŠ äº§å“åˆ†ç±»ç±»åŒºå—ç¬¬ä¸‰ç§é€‰æ‹©")
 	public void Product121() {
 
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=²úÆ··ÖÀà");
-		webtest.typeAndClear("id=title","µÚ3¸ö");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=äº§å“åˆ†ç±»");
+		webtest.typeAndClear("id=title","ç¬¬3ä¸ª");
 		webtest.click("id=params[showChildren]1");
 		webtest.click("id=params[initialExpand]2");
 		webtest.click("id=params[fromCurrent]1");
 		webtest.click("id=submit");
 	}
-	@Test(description="Ìí¼Ó²úÆ··ÖÀàÀàÇø¿éµÚËÄÖÖÑ¡Ôñ")
+	@Test(description="æ·»åŠ äº§å“åˆ†ç±»ç±»åŒºå—ç¬¬å››ç§é€‰æ‹©")
 	public void Product122() {
 
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=²úÆ··ÖÀà");
-		webtest.typeAndClear("id=title","µÚ4¸ö");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=äº§å“åˆ†ç±»");
+		webtest.typeAndClear("id=title","ç¬¬4ä¸ª");
 		webtest.click("id=params[showChildren]1");
 		webtest.click("id=params[initialExpand]2");
 		webtest.click("id=params[fromCurrent]2");
 		webtest.click("id=submit");
 	}
-	@Test(description="Ìí¼Ó²úÆ··ÖÀàÀàÇø¿éµÚÎåÖÖÑ¡Ôñ")
+	@Test(description="æ·»åŠ äº§å“åˆ†ç±»ç±»åŒºå—ç¬¬äº”ç§é€‰æ‹©")
 	public void Product211() {
 
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=²úÆ··ÖÀà");
-		webtest.typeAndClear("id=title","µÚ5¸ö");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=äº§å“åˆ†ç±»");
+		webtest.typeAndClear("id=title","ç¬¬5ä¸ª");
 		webtest.click("id=params[showChildren]2");
 		webtest.click("id=params[initialExpand]1");
 		webtest.click("id=params[fromCurrent]1");
 		webtest.click("id=submit");
 	}
-	@Test(description="Ìí¼Ó²úÆ··ÖÀàÀàÇø¿éµÚÁùÖÖÑ¡Ôñ")
+	@Test(description="æ·»åŠ äº§å“åˆ†ç±»ç±»åŒºå—ç¬¬å…­ç§é€‰æ‹©")
 	public void Product212() {
 
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=²úÆ··ÖÀà");
-		webtest.typeAndClear("id=title","µÚ6¸ö");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=äº§å“åˆ†ç±»");
+		webtest.typeAndClear("id=title","ç¬¬6ä¸ª");
 		webtest.click("id=params[showChildren]2");
 		webtest.click("id=params[initialExpand]1");
 		webtest.click("id=params[fromCurrent]2");
 		webtest.click("id=submit");
 	}
-	@Test(description="Ìí¼Ó²úÆ··ÖÀàÀàÇø¿éµÚÆßÖÖÑ¡Ôñ")
+	@Test(description="æ·»åŠ äº§å“åˆ†ç±»ç±»åŒºå—ç¬¬ä¸ƒç§é€‰æ‹©")
 	public void Product221() {
 
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=²úÆ··ÖÀà");
-		webtest.typeAndClear("id=title","µÚ7¸ö");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=äº§å“åˆ†ç±»");
+		webtest.typeAndClear("id=title","ç¬¬7ä¸ª");
 		webtest.click("id=params[showChildren]2");
 		webtest.click("id=params[initialExpand]2");
 		webtest.click("id=params[fromCurrent]1");
 		webtest.click("id=submit");
 	}
-	@Test(description="Ìí¼Ó²úÆ··ÖÀàÀàÇø¿éµÚ°ËÖÖÑ¡Ôñ")
+	@Test(description="æ·»åŠ äº§å“åˆ†ç±»ç±»åŒºå—ç¬¬å…«ç§é€‰æ‹©")
 	public void Product222s() {
 
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=²úÆ··ÖÀà");
-		webtest.typeAndClear("id=title","µÚ8¸ö");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=äº§å“åˆ†ç±»");
+		webtest.typeAndClear("id=title","ç¬¬8ä¸ª");
 		webtest.click("id=params[showChildren]2");
 		webtest.click("id=params[initialExpand]2");
 		webtest.click("id=params[fromCurrent]2");

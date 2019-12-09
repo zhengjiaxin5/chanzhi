@@ -12,15 +12,15 @@ public class FilterAccountLogin extends BaseTest{
 	@Test
 	public void testFilterAccountLogin() throws UnknownHostException {
 		webtest.addWhiteListIP();
-		//½øÈëÇ°Ì¨½çÃæ
+		//è¿›å…¥å‰å°ç•Œé¢
 		webtest.open("http://localhost/chanzhieps/www/index.php/user-login.html");
-		//Ñ­»·µÇÂ¼
+		//å¾ªç¯ç™»å½•
 		webtest.type("id=account", "demo");
 		webtest.type("id=password", "demo0");
 		for(int i=0;i<11;i++) {
 			webtest.click("id=submit");
 		}
-		//¶ÏÑÔ
-		assertTrue(webtest.isTextPresent("ÓÃ»§ÒÑ¾­±»Ëø¶¨£¬Çë3·ÖÖÓºóÔÙÖØĞÂ³¢ÊÔµÇÂ¼"));
+		//æ–­è¨€
+		assertTrue(webtest.isTextPresent("ç”¨æˆ·å·²ç»è¢«é”å®šï¼Œè¯·3åˆ†é’Ÿåå†é‡æ–°å°è¯•ç™»å½•"));
 	}
 }

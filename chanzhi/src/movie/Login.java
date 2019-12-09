@@ -10,7 +10,7 @@ public class Login extends BaseTest{
 	@Test(priority=1)
 	public void login() throws Exception {
 		webtest.open("http://www.roqisoft.com/zhsx/");
-		webtest.click("link=µÇÂ¼");
+		webtest.click("link=ç™»å½•");
 		webtest.type("id=user","admin3");
 		webtest.type("id=pw","admin3");
 		webtest.click("xpath=/html/body/form/div/div[4]/div[2]/input");
@@ -29,9 +29,9 @@ public class Login extends BaseTest{
 		
 		webtest.click("xpath=//*[@id=\"menu_draft\"]/a");
 		webtest.click("xpath=//*[@id=\"adm_log_list\"]/tbody/tr[1]/td[2]/a");		
-		webtest.type("id=title","ĞŞ¸Ä");
+		webtest.type("id=title","ä¿®æ”¹");
 		webtest.tapClick();
-		webtest.tapType("ĞŞ¸Ä");
+		webtest.tapType("ä¿®æ”¹");
 		webtest.leaveFrame();
 		webtest.click("xpath=//*[@id=\"pubdf\"]");
 	}
@@ -40,7 +40,7 @@ public class Login extends BaseTest{
 		webtest.open("http://www.roqisoft.com/zhsx/blog/admin/mypic.php");
 		webtest.click("xpath=//*[@id=\"post_bar\"]/div[1]/span[1]/strong");
 		Thread.sleep(3000);
-		webtest.enterFrame1("xpath=//iframe[starts-with(@src,'attachment.php')]");//ÔÚWebDriverEngineÖĞĞÂÌí¼ÓÁËÒ»ÖÖ·½·¨£¬Í¨¹ıxpathÕÒµ½×ÓÒ³Ãæ
+		webtest.enterFrame1("xpath=//iframe[starts-with(@src,'attachment.php')]");//åœ¨WebDriverEngineä¸­æ–°æ·»åŠ äº†ä¸€ç§æ–¹æ³•ï¼Œé€šè¿‡xpathæ‰¾åˆ°å­é¡µé¢
 		webtest.type("xpath=//*[@id=\"attachbody\"]/span/input","E:\\997.png");
 		webtest.click("xpath=//*[@id=\"media-upload-body\"]/input");
 		Thread.sleep(3000);		

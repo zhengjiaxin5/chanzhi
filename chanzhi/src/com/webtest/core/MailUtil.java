@@ -18,7 +18,7 @@ import com.webtest.utils.ReadProperties;
 public class MailUtil {
 	static int port = 25;
 	static String server = "smtp.qq.com";
-	static String from = "闫笑千";
+	static String from = "蝉知";
 //	static String user = "934518049@qq.com";
 //	static String password = "ljdijpduqjxobbfe";
 
@@ -61,7 +61,7 @@ public class MailUtil {
 	}
 
 	public static void main(String args[]) throws UnsupportedEncodingException {
-		MailUtil.sendEmail("438117595@qq.com", "123", "1");
+		MailUtil.sendEmail("65595490@qq.com", "123", "1");
 	}
 
 }

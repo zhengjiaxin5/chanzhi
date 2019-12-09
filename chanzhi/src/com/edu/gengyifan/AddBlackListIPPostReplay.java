@@ -23,7 +23,7 @@ public class AddBlackListIPPostReplay extends BaseTest{
 		}
 		webtest.backgroundLogin("137554616", "fcschalke04");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[3]/a");
-		//断言
-		assertTrue(webtest.isTextPresent("系统检测到您的行为存在异常"));
+		//鏂█
+		assertTrue(webtest.isTextPresent("绯荤粺妫�娴嬪埌鎮ㄧ殑琛屼负瀛樺湪寮傚父"));
 	}
 }

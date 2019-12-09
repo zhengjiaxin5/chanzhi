@@ -3,6 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="com.edu.mayinxiang.test21_indexrenew">
+        <methods>
+          <include name="doAfterMethod"/>
+          <include name="test"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.mayinxiang.test21_indexrenew -->
+=======
       <class name="com.edu.yanxiaoqian.Test2">
         <methods>
           <include name="doAfterMethod"/>
@@ -11,6 +20,7 @@
           <include name="doBeforeClass"/>
         </methods>
       </class> <!-- com.edu.yanxiaoqian.Test2 -->
+>>>>>>> 42266362d0c01c10b287194cb497f6492544b894
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

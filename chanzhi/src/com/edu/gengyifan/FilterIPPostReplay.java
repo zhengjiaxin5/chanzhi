@@ -11,7 +11,7 @@ public class FilterIPPostReplay extends BaseTest{
 	public void testFilterIPPostReplay() {
 		webtest.addWhiteListAccount();
 		webtest.frontLogin("demo","demo");
-		webtest.click("link=论坛");
+		webtest.click("link=璁哄潧");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/div/table/tbody/tr[1]/td[1]/a");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a");
 		for(int i=0;i<4;i++) {
@@ -24,7 +24,7 @@ public class FilterIPPostReplay extends BaseTest{
 		}
 		webtest.click("xpath=/html/body/div[1]/div[1]/div/header/div[1]/div/nav/a[2]");
 		webtest.frontLogin("demo","demo");
-		webtest.click("link=论坛");
+		webtest.click("link=璁哄潧");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/div/table/tbody/tr[1]/td[1]/a");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a");
 		for(int i=0;i<2;i++) {
@@ -35,7 +35,7 @@ public class FilterIPPostReplay extends BaseTest{
 			webtest.leaveFrame();
 			webtest.click("id=submit");
 		}
-		//断言
-		assertTrue(webtest.isTextPresent("系统检测到您的行为存在异常"));
+		//鏂█
+		assertTrue(webtest.isTextPresent("绯荤粺妫�娴嬪埌鎮ㄧ殑琛屼负瀛樺湪寮傚父"));
 	}
 }

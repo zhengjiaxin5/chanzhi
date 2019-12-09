@@ -9,41 +9,41 @@ import org.testng.annotations.Test;
 import com.webtest.dataprovider.ExcelDataProvider;
 import com.webtest.demo.Admin_Login;
 
-public class Code extends Admin_Login1{
+public class Code extends Admin_Login{
 	
 	@DataProvider(name="code")
 	public  Object[] code() throws IOException{
-		Object[] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","code");
+		Object[] user= new  ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps1.xlsx","code");
 		 return user;
 	}
-	//Ìí¼Óhtml¡¢css¡¢javascript´úÂë
-	@Test(dataProvider ="code",description="Ìí¼Ó´úÂë")
+	//æ·»åŠ htmlã€cssã€javascriptä»£ç 
+	@Test(dataProvider ="code",description="æ·»åŠ ä»£ç ")
 	public void test9(String html,String css,String Javascript) throws InterruptedException {
-		webtest.click("link=Éè¼Æ");
-		webtest.click("link=Çø¿é");
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=htmlÔ´´úÂë");//Ñ¡ÔñhtmlÑ¡Ïî
+		webtest.click("link=è®¾è®¡");
+		webtest.click("link=åŒºå—");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=htmlæºä»£ç ");//é€‰æ‹©htmlé€‰é¡¹
 		
-		webtest.type("id=title", "ÎÒÓĞ´úÂë");
+		webtest.type("id=title", "æˆ‘æœ‰ä»£ç ");
 		webtest.tapClick();
 		webtest.tapClick();
 		webtest.tapType(html);
 		Thread.sleep(5000);
-		//Ğ´css´úÂë
+		//å†™cssä»£ç 
 		webtest.click("link=CSS");
 		webtest.tapClick();
 		webtest.tapClick();
 		webtest.tapClick();
 		webtest.tapType(css);
 		Thread.sleep(5000);
-		//Ğ´javascript
+		//å†™javascript
 		webtest.click("link=Javascript");
 		webtest.tapClick();
 		webtest.tapClick();
 		webtest.tapType(Javascript);
 		Thread.sleep(5000);
-		webtest.click("link=±£´æ");
+		webtest.click("link=ä¿å­˜");
 
 
 

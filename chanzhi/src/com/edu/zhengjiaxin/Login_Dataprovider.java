@@ -13,7 +13,7 @@ import com.webtest.dataprovider.ExcelDataProvider;
 public class Login_Dataprovider extends BaseTest {
 	@DataProvider(name="chanzhieps")
 	public  Object[][] getchanzhiepsData() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("D:\\demo\\data\\chanzhieps.xlsx","chanzhieps");
+		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps.xlsx","chanzhieps");
 		 return user;
 	}
 

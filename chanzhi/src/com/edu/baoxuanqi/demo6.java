@@ -1,41 +1,46 @@
-package com.webtest.demo;
+package com.edu.baoxuanqi;
 
 import org.testng.annotations.Test;
 
+import com.webtest.demo.Admin_Login;
+
+
+
 public class demo6 extends Admin_Login{
-@Test//ĞÜÕÆºÅÅúÁ¿Ìá½»
+	@Test(description="ç†ŠæŒå·æ‰¹é‡æäº¤")
 public void test7() {
-	webtest.click("link=ÍÆ¹ã");
-	webtest.click("link=ĞÜÕÆºÅ");
-	webtest.click("link=ÅúÁ¿Ìá½»");
-	webtest.click("link=ÅúÁ¿Ìá½»×ÊÔ´");
+	webtest.click("link=æ¨å¹¿");
+	webtest.click("link=ç†ŠæŒå·");
+	webtest.click("link=æ‰¹é‡æäº¤");
+	webtest.click("link=æ‰¹é‡æäº¤èµ„æº");
 }
-@Test//ĞÜÕÆºÅÈÕÖ¾
+	@Test(description="ç†ŠæŒå·æ—¥å¿—")
 public void test8() {
-	webtest.click("link=ÍÆ¹ã");
-	webtest.click("link=ĞÜÕÆºÅ");
-	webtest.click("link=ÈÕÖ¾");
-	webtest.click("link=×î½üÒ»ÖÜ");
+	webtest.click("link=æ¨å¹¿");
+	webtest.click("link=ç†ŠæŒå·");
+	webtest.click("link=æ—¥å¿—");
+	webtest.click("link=æœ€è¿‘ä¸€å‘¨");
 	
 }
-@Test//ĞÜÕÆºÅÈÕÖ¾
+	@Test(description="ç†ŠæŒå·æ—¥å¿—")
 public void test9() {
-	webtest.click("link=ÍÆ¹ã");
-	webtest.click("link=ĞÜÕÆºÅ");
-	webtest.click("link=ÈÕÖ¾");
+	webtest.click("link=æ¨å¹¿");
+	webtest.click("link=ç†ŠæŒå·");
+	webtest.click("link=æ—¥å¿—");
 	webtest.click("name=end");
 	webtest.click("xpath=/html/body/div[3]/div[3]/table/tbody/tr[2]/td[4]");
-	webtest.click("link=ËÑË÷");
+	webtest.click("link=æœç´¢");
 }
-@Test//ĞÜÕÆºÅÈÕÖ¾
+	@Test(description="ç†ŠæŒå·æ—¥å¿—")
 public void test10() {
-	webtest.click("link=ÍÆ¹ã");
-	webtest.click("link=ĞÜÕÆºÅ");
-	webtest.click("link=ÈÕÖ¾");
-	webtest.click("link=×î½ü30Ìì");
+	webtest.click("link=æ¨å¹¿");
+	webtest.click("link=ç†ŠæŒå·");
+	webtest.click("link=æ—¥å¿—");
+	webtest.click("link=æœ€è¿‘30å¤©");
 	webtest.click("xpath=/html/body/div[1]/div[2]/div/table/tbody/tr[21]/td/div/a[1]");
 }
 
 
 
 }
+

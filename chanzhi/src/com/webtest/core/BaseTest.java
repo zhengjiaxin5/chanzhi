@@ -23,10 +23,6 @@ import org.testng.annotations.BeforeSuite;
 import com.webtest.utils.Log;
 import com.webtest.utils.ReadProperties;
 
-/**
- * author:lihuanzhen
- * ��ʼ�������
- */
 
 
 public class BaseTest {
@@ -65,12 +61,6 @@ public class BaseTest {
 	}
 
 
-	/**
-	 * 
-	 *��ʼ�������
-	 * 
-	 */
-
 
 	@BeforeClass
 	public void doBeforeClass() throws Exception {
@@ -87,7 +77,7 @@ public class BaseTest {
 	
 
 
-	@AfterSuite
+	@AfterClass
 	public void doAfterMethod() {
 		if(this.driver != null){
 			this.driver.quit();

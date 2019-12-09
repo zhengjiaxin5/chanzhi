@@ -11,34 +11,29 @@ import com.webtest.demo.Admin_Login;
 
 
 
-public class BlockArt extends Admin_Login1{
-	
+public class BlockArt extends Admin_Login{
 	
 	@DataProvider(name="article")
 	public  Object[][] article() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("E:\\data\\chanzhieps.xlsx","article");
+		Object[][] user= new ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps1.xlsx","article");
 		 return user;
 	}
 	
-	@Test(dataProvider ="article",description="Çø¿é×Ô¶¨ÒåÖĞÌí¼ÓÒ»¸öÇø¿é")
+	@Test(dataProvider ="article",description="æœ€æ–°æ–‡ç« ä¸­æ·»åŠ ä¸€ä¸ªåŒºå—")
 	public void test(String title,String limit,String moretext,String moreurl) throws InterruptedException {
-		webtest.click("link=Éè¼Æ");
-		webtest.click("link=Çø¿é");
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//³öÏÖÏÂÀ­¿ò
-		webtest.click("link=×îĞÂÎÄÕÂ");
+		webtest.click("link=è®¾è®¡");
+		webtest.click("link=åŒºå—");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.click("xpath=//*[@id=\"contentTab\"]/table/tbody[1]/tr[1]/td/div/button");//å‡ºç°ä¸‹æ‹‰æ¡†
+		webtest.click("link=æœ€æ–°æ–‡ç« ");
 		
-		//Êı¾İÇı¶¯
-		webtest.type("id=title",title);
+		//æ•°æ®é©±åŠ¨
 		webtest.typeAndClear("id=title",title);
 		webtest.type("id=params[limit]",limit );
-		webtest.typeAndClear("id=params[limit]",limit );
-		webtest.type("xpath=//*[@id=\"params[moreText]\"]",moretext);//Ìí¼Ó¸ü¶àÁ¬½Ó
-		webtest.typeAndClear("xpath=//*[@id=\"params[moreText]\"]",moretext);//Ìí¼Ó¸ü¶àÁ¬½Ó
-		webtest.type("id=params[moreUrl]",moreurl );
-		webtest.typeAndClear("id=params[moreUrl]",moreurl );
+		webtest.type("xpath=//*[@id=\"params[moreText]\"]",moretext);//æ·»åŠ æ›´å¤šè¿æ¥
+		webtest.type("id=params[moreUrl]",moreurl);
 		webtest.click("id=submit");
 		Thread.sleep(5000);
-		assertTrue(webtest.isTextPresent("±£´æ³É¹¦"));
+		assertTrue(webtest.isTextPresent("ä¿å­˜æˆåŠŸ"));
 	}
 }

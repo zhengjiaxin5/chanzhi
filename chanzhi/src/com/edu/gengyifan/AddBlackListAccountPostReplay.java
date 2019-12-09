@@ -25,7 +25,7 @@ public class AddBlackListAccountPostReplay extends BaseTest{
 		}
 		webtest.backgroundLogin("137554616", "fcschalke04");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[3]/a");
-		//¶ÏÑÔ
+		//æ–­è¨€
 		assertTrue(webtest.isTextPresent("demo"));
 	}
 }

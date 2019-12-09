@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20946" started-at="2019-12-04T08:55:35Z" finished-at="2019-12-04T08:55:56Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20946" started-at="2019-12-04T08:55:35Z" finished-at="2019-12-04T08:55:56Z">
+      <class name="com.edu.mayinxiang.test31_forumsetup">
+        <test-method status="PASS" signature="doBeforeClass()[pri:0, instance:com.edu.mayinxiang.test31_forumsetup@d8355a8]" name="doBeforeClass" is-config="true" duration-ms="7138" started-at="2019-12-04T08:55:35Z" finished-at="2019-12-04T08:55:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doBeforeClass -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:com.edu.mayinxiang.test31_forumsetup@d8355a8]" name="testLogin" duration-ms="5775" started-at="2019-12-04T08:55:42Z" description="鍚庡彴鐧诲綍" finished-at="2019-12-04T08:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.edu.mayinxiang.test31_forumsetup@d8355a8]" name="test" duration-ms="7999" started-at="2019-12-04T08:55:48Z" finished-at="2019-12-04T08:55:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="doAfterMethod()[pri:0, instance:com.edu.mayinxiang.test31_forumsetup@d8355a8]" name="doAfterMethod" is-config="true" duration-ms="2237" started-at="2019-12-04T08:55:56Z" finished-at="2019-12-04T08:55:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfterMethod -->
+      </class> <!-- com.edu.mayinxiang.test31_forumsetup -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+=======
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
@@ -30,4 +59,5 @@
       </class> <!-- com.edu.yanxiaoqian.Test2 -->
     </test> <!-- test1 -->
   </suite> <!-- s1 -->
+>>>>>>> 42266362d0c01c10b287194cb497f6492544b894
 </testng-results>

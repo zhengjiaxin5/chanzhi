@@ -1,48 +1,46 @@
 package com.edu.liqiushui;
+
 import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import com.webtest.dataprovider.ExcelDataProvider;
 import com.webtest.demo.Admin_Login;
 
+public class NavChild extends Admin_Login{
 
-public class NavChild extends Admin_Login1{
-
-	//Ìí¼ÓÒ»¸öµ¼º½a
-	@Test(priority=1,description="ÏÈÌí¼ÓÒ»¸öµ¼º½")
+	//æ·»åŠ ä¸€ä¸ªå¯¼èˆªa
+	@Test(priority=1,description="å…ˆæ·»åŠ ä¸€ä¸ªå¯¼èˆª")
 	public void test1() throws InterruptedException {
-		webtest.click("link=Éè¼Æ");
-		webtest.click("link=µ¼º½");
-		webtest.mouseoverElement("xpath=//*[@id=\"navList\"]/li[1]/span[1]");//Ê¹Ìí¼Ó°´Å¥³öÏÖ
-		webtest.click("xpath=//*[@id=\"navList\"]/li[1]/span[1]/span/a[2]/i");//µã»÷Ìí¼Ó
-//		webtest.typeAndClear("xpath=//*[@id=\"nav[1][title][]\"]","ÎÒÓĞ×Óµ¼º½");//Ìí¼Ó¸ü¶àÁ¬½Ó
-		webtest.click("link=±£´æ");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));	
+		webtest.click("link=è®¾è®¡");
+		webtest.click("link=å¯¼èˆª");
+		webtest.mouseoverElement("xpath=//*[@id=\"navList\"]/li[1]/span[1]");
+		webtest.click("xpath=//*[@id=\"navList\"]/li[1]/span[1]/span/a[2]/i");
+		webtest.click("link=ä¿å­˜");
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));	
 		Thread.sleep(5000);
 
 	}
-	//Ìí¼Ó×Óµ¼º½
-	@Test(priority=2,description="Ìí¼Ó×Óµ¼º½")
+	//æ·»åŠ å­å¯¼èˆª
+	@Test(priority=2,description="æ·»åŠ å­å¯¼èˆª")
 	public void test2() throws InterruptedException {
-		webtest.mouseoverElement("xpath=//*[@id=\"navList\"]/li[2]/span[1]");//Ê¹Ìí¼Ó×Óµ¼º½°´Å¥³öÏÖ
+		webtest.mouseoverElement("xpath=//*[@id=\"navList\"]/li[2]/span[1]");
+		webtest.click("xpath=//*[@id=\"navList\"]/li[2]/span[1]/span/a[4]/i");
 		Thread.sleep(5000);
-
-		webtest.click("xpath=//*[@id=\"navList\"]/li[2]/span[1]/span/a[4]/i");//µã»÷Ìí¼ÓÒ»¸ö×Óµ¼º½
-		webtest.click("xpath=//*[@id=\"navList\"]/li[2]/span[1]/span/a[4]/i");//µã»÷Ìí¼ÓÒ»¸ö×Óµ¼º½
-
-		//*[@id="navList"]/li[2]/span[1]/span/a[4]/i
-		Thread.sleep(5000);
-
-		webtest.typeAndClear("id=nav[2][title][]","ÎÒÊÇ×Óµ¼º½");
-		webtest.click("link=±£´æ");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));	
+		webtest.typeAndClear("id=nav[2][title][]","ç¬¬ä¸€ä¸ªå­å¯¼èˆª");
+		webtest.click("link=ä¿å­˜");
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));	
 	}
 	
 	
 		
 }
 	
+
+
 	
 	
 	
