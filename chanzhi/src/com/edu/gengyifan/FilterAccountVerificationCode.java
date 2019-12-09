@@ -12,15 +12,15 @@ public class FilterAccountVerificationCode extends BaseTest{
 	@Test
 	public void testFilterAccountVerificationCode() throws UnknownHostException {
 		webtest.addWhiteListIP();
-		//´ò¿ªÒ³Ãæ
+		//æ‰“å¼€é¡µé¢
 		webtest.open("http://localhost/chanzhieps/www/index.php/user-login.html");
-		//Ñ­»·ÊäÈëÕËºÅÃÜÂëºÍ´íÎóµÄÑéÖ¤Âë
+		//å¾ªç¯è¾“å…¥è´¦å·å¯†ç å’Œé”™è¯¯çš„éªŒè¯ç 
 		for (int i = 0; i < 6; i++) {
 			webtest.type("account", "demo");
 			webtest.type("password", "demo");
 			webtest.type("xpath=/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[2]/form/div[4]", "1");
 		}
-		//¶ÏÑÔ
-		assertTrue(webtest.isTextPresent("ÏµÍ³¼ì²âµ½ÄúµÄĞĞÎª´æÔÚÒì³£"));
+		//æ–­è¨€
+		assertTrue(webtest.isTextPresent("ç³»ç»Ÿæ£€æµ‹åˆ°æ‚¨çš„è¡Œä¸ºå­˜åœ¨å¼‚å¸¸"));
 	}
 }

@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import com.webtest.utils.Log;
 /**
  * author:lihuanzhen
- * ²éÕÒÔªËØÀà
+ * æŸ¥æ‰¾å…ƒç´ ç±»
  */
 public class ElementFinder {
 	

@@ -10,11 +10,11 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test28_forumdisplay extends Admin_Login{
-	@Test(description="ÂÛÌ³Ö÷ÌâµÄÒş²Ø")
+	@Test(description="è®ºå›ä¸»é¢˜çš„éšè—")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[4]/a");
 		webtest.click("xpath=//*[@id=\"mainNavbarCollapse\"]/ul[1]/li[3]/a");
 		webtest.click("xpath=//*[@id=\"threadList\"]/tbody/tr/td[10]/a[2]");
-		assertTrue(webtest.isTextPresent("ÒÑÒş²Ø"));
+		assertTrue(webtest.isTextPresent("å·²éšè—"));
 	}
 }

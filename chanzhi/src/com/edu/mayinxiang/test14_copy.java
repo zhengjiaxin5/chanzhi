@@ -12,7 +12,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test14_copy extends Admin_Login{
-	@Test(description="繁体->简体内容的拷贝")
+	@Test(description="绻佷綋->绠�浣撳唴瀹圭殑鎷疯礉")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[2]/a");
@@ -21,6 +21,6 @@ public class test14_copy extends Admin_Login{
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
 		webtest.click("id=submit");
 		webtest.open("http://127.0.0.1/chanzhieps/www/");
-		assertTrue(webtest.isTextPresent("爲天下企業提供專業的營銷工具"));
+		assertTrue(webtest.isTextPresent("鐖插ぉ涓嬩紒妤彁渚涘皥妤殑鐕熼姺宸ュ叿"));
 	}
 }

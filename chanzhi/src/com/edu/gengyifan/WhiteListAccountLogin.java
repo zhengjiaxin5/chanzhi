@@ -27,6 +27,6 @@ public class WhiteListAccountLogin extends BaseTest{
 		webtest.type("id=account", "demo");
 		webtest.type("id=password", "demo");
 		webtest.click("id=submit");
-		assertFalse(webtest.isTextPresent("系统检测到您的行为存在异常"));
+		assertFalse(webtest.isTextPresent("绯荤粺妫�娴嬪埌鎮ㄧ殑琛屼负瀛樺湪寮傚父"));
 	}
 }

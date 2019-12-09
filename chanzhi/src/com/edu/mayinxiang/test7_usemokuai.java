@@ -10,25 +10,25 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test7_usemokuai extends Admin_Login{
-	@Test(description="ÓÃ»§Ä£¿éµÄÔö¼ÓÉ¾³ı")
+	@Test(description="ç”¨æˆ·æ¨¡å—çš„å¢åŠ åˆ é™¤")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"modules3\"]");
 		webtest.click("xpath=//*[@id=\"modules2\"]");
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
 		webtest.click("id=submit");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 //		
 	}
 	
-	@Test(description="ÓÃ»§Ä£¿éµÄÔö¼ÓºÍÉ¾³ı")
+	@Test(description="ç”¨æˆ·æ¨¡å—çš„å¢åŠ åˆ é™¤")
 	public void test2() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"modules1\"]");
 		webtest.click("xpath=//*[@id=\"modules2\"]");
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
 		webtest.click("id=submit");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 //		
 	}
 }

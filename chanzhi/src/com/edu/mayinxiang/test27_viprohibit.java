@@ -11,18 +11,18 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test27_viprohibit extends Admin_Login{
-	@Test(description="»áÔ±µÄ½ûÓÃ")
+	@Test(description="ä¼šå‘˜çš„ç¦ç”¨")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[4]/a");
 		webtest.click("xpath=//*[@id=\"userList\"]/tbody/tr[1]/td[11]/span/a");
 		webtest.click("xpath=//*[@id=\"userList\"]/tbody/tr[1]/td[11]/span/ul/li[1]/a");
-		assertTrue(webtest.isTextPresent("½ûÓÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("ç¦ç”¨æˆåŠŸ"));
 	}
 	@Test
 	public void test2() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[4]/a");
 		webtest.click("xpath=//*[@id=\"userList\"]/tbody/tr[1]/td[11]/a[3]");
-		assertTrue(webtest.isTextPresent("½â³ı½ûÓÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è§£é™¤ç¦ç”¨æˆåŠŸ"));
 //		webtest.enter();
 	}
 }

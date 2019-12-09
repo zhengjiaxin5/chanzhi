@@ -17,7 +17,7 @@ public class shopcity extends Admin_Login{
 	@DataProvider
 	public Object[][] leimu() throws IOException {
 		ExcelDataProvider excelDataProvider=new ExcelDataProvider();
-		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xls", "leimu");
+		Object[][] s=excelDataProvider.getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\nnn.xls", "leimu");
 		return s;
 	}
 	@Test(description="商城产品下添加类目",priority=1,dataProvider="leimu")
@@ -181,7 +181,7 @@ public class shopcity extends Admin_Login{
 	@DataProvider
 	public Object[][] name() throws IOException {
 		ExcelDataProvider excelDataProvider=new ExcelDataProvider();
-		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xls", "kuaidi");
+		Object[][] s=excelDataProvider.getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\nnn.xls", "kuaidi");
 		return s;
 	}
 	@Test(description="添加快递",priority=10,dataProvider="name")

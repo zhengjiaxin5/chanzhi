@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Action;
-//ÎÒµÄÕÊºÅÊÇ2784038315@qq.com ÃÜÂëZhen0820
+//æˆ‘çš„å¸å·æ˜¯2784038315@qq.com å¯†ç Zhen0820
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -20,7 +20,7 @@ public class Xueli {
 
 		WebDriver wd = new FirefoxDriver();
 		wd.get("http://10.7.10.7/");
-		wd.findElement(By.linkText("µÇÂ¼")).click();
+		wd.findElement(By.linkText("ç™»å½•")).click();
 		Thread.sleep(3000);
 		wd.findElement(By.name("username")).sendKeys("2784038315@qq.com");
 		wd.findElement(By.name("password")).sendKeys("Zhen0820");

@@ -1,37 +1,33 @@
-package com.webtest.demo;
+package com.edu.baoxuanqi;
 
 import org.testng.annotations.Test;
 
+import com.webtest.demo.Admin_Login;
+
+
+
 public class demo4 extends Admin_Login{
-@Test//ËùÓĞÁ´½Ó±à¼­
+	@Test(description="æ‰€æœ‰é“¾æ¥ç¼–è¾‘")
 public void test6() {
-	webtest.click("link=ÍÆ¹ã");
-	webtest.click("link=ÓÑÇéÁ´½Ó");
-	
+	webtest.click("link=æ¨å¹¿");
+	webtest.click("link=å‹æƒ…é“¾æ¥");
 	webtest.enterFrame(1);
 	webtest.click("tag=body");
 	webtest.type("tag=body","111");
 	webtest.leaveFrame();
 	webtest.click("xpath=//*[@id=\"submit\"]");
 }
-@Test//Ê×Ò³Á´½Ó±à¼­
+	@Test(description="é¦–é¡µé“¾æ¥ç¼–è¾‘")
 public void test16() {
-webtest.click("link=ÍÆ¹ã");
-	webtest.click("link=ÓÑÇéÁ´½Ó");
+webtest.click("link=æ¨å¹¿");
+	webtest.click("link=å‹æƒ…é“¾æ¥");
 	webtest.enterFrame(0);
 	webtest.click("tag=body");
-	webtest.type("tag=body","Ìí¼ÓµÄÍøÕ¾½Ğ²õÖª");
+	webtest.type("tag=body","æ·»åŠ çš„ç½‘ç«™å«è‰çŸ¥");
 	webtest.leaveFrame();
 	webtest.click("xpath=//*[@id=\"submit\"]");
 }
-@Test//Ê×Ò³Á´½ÓÖĞ·µ»ØÉÏÒ»²½²Ù×÷
-public void test17() {
-	webtest.click("link=ÍÆ¹ã");
-	webtest.click("link=ÓÑÇéÁ´½Ó");
-	webtest.enterFrame(0);
-	webtest.click("xpath=//*[@id=\"ajaxForm\"]/table/tbody/tr[1]/td/div/div[1]/span[8]/span");
-	//webtest.click("xpath=//*[@id=\"submit\"]");
-}
 	
+
 
 }
