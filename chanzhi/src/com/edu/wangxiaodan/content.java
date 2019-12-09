@@ -18,21 +18,21 @@ public class content extends Admin_Login{
 	@DataProvider
 	public Object[][] name() throws IOException {
 		ExcelDataProvider excelDataProvider=new ExcelDataProvider();
-		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xlsx", "sheet2");
+		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xls", "sheet2");
 		return s;
 	}
 	
-	@Test(description="ÄÚÈİÎÄÕÂÏÂÌí¼Ó¶à¸öÄ¿Â¼",priority=1,dataProvider="name")
+	@Test(description="å†…å®¹æ–‡ç« ä¸‹æ·»åŠ å¤šä¸ªç›®å½•",priority=1,dataProvider="name")
 	/**
-	 * Ìí¼ÓÄ¿Â¼Ò»£¬ÑéÖ¤ÊÇ·ñÓĞÄ¿Â¼Ò»
-	 * Ìí¼Ó@£¤3£¤hadsjkhfsd£¬ÑéÖ¤ÊÇ·ñÓĞ@£¤3£¤hadsjkhfsd
-	 * Ìí¼ÓÁ½¸ö¿Õ¸ñ£¬ÑéÖ¤ÊÇ·ñÌáÊ¾ÇëÊäÈëÕıÈ·µÄÀàÄ¿Ãû³Æ
+	 * æ·»åŠ ç›®å½•ä¸€ï¼ŒéªŒè¯æ˜¯å¦æœ‰ç›®å½•ä¸€
+	 * æ·»åŠ @ï¿¥3ï¿¥hadsjkhfsdï¼ŒéªŒè¯æ˜¯å¦æœ‰@ï¿¥3ï¿¥hadsjkhfsd
+	 * æ·»åŠ ä¸¤ä¸ªç©ºæ ¼ï¼ŒéªŒè¯æ˜¯å¦æç¤ºè¯·è¾“å…¥æ­£ç¡®çš„ç±»ç›®åç§°
 	 */
 	public void test1(String name,String name1) throws IOException{
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÎÄÕÂ");
-		webtest.click1("link=Î¬»¤ÀàÄ¿");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ–‡ç« ");
+		webtest.click1("link=ç»´æŠ¤ç±»ç›®");
 		webtest.type("id=children[]", name);
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
@@ -41,46 +41,46 @@ public class content extends Admin_Login{
 		
 		
 	}
-	@Test(description="ÔÚÄ¿Â¼Ò»ÏÂÌí¼ÓÒ»ÆªÎÄÕÂ,±êÌâ²»ÄÜÖØ¸´",priority=2)
+	@Test(description="åœ¨ç›®å½•ä¸€ä¸‹æ·»åŠ ä¸€ç¯‡æ–‡ç« ,æ ‡é¢˜ä¸èƒ½é‡å¤",priority=2)
 	public void test2() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÎÄÕÂ");
-		boolean s=webtest.isTextPresent("ÕâÊÇÒ»¸ötitle");
-		webtest.click1("link=Ä¿Â¼Ò»");
-		webtest.click1("link=·¢²¼ÎÄÕÂ");
-		webtest.type("id=title", "ÕâÊÇÒ»¸ötitle");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ–‡ç« ");
+		boolean s=webtest.isTextPresent("è¿™æ˜¯ä¸€ä¸ªtitle");
+		webtest.click1("link=ç›®å½•ä¸€");
+		webtest.click1("link=å‘å¸ƒæ–‡ç« ");
+		webtest.type("id=title", "è¿™æ˜¯ä¸€ä¸ªtitle");
 		webtest.enterFrame(0);
 		webtest.click1("tag=body");
-		webtest.type("tag=body", "ÕâÊÇµÚÒ»ÆªÎÄÕÂµÄÄÚÈİ");
+		webtest.type("tag=body", "è¿™æ˜¯ç¬¬ä¸€ç¯‡æ–‡ç« çš„å†…å®¹");
 		webtest.leaveFrame();
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("id=submit");
 		if(s==true) {
-			assert(webtest.isTextPresent("ÕâÊÇÒ»¸ötitle"));
+			assert(webtest.isTextPresent("è¿™æ˜¯ä¸€ä¸ªtitle"));
 		}
 	}
 	/**
-	 * ÕıÈ·µÄÌí¼ÓÒ»ÆªÎÄÕÂ
-	 * Ìí¼ÓÒ»ÆªtitleÎª¿Õ¸ñµÄÎÄÕÂ
-	 * Ìí¼ÓÒ»ÆªÄÚÈİÎª¿Õ¸ñµÄÎÄÕÂ
+	 * æ­£ç¡®çš„æ·»åŠ ä¸€ç¯‡æ–‡ç« 
+	 * æ·»åŠ ä¸€ç¯‡titleä¸ºç©ºæ ¼çš„æ–‡ç« 
+	 * æ·»åŠ ä¸€ç¯‡å†…å®¹ä¸ºç©ºæ ¼çš„æ–‡ç« 
 	 * 
 	 */
 	@DataProvider
 	public Object[][] name1() throws IOException {
 		ExcelDataProvider excelDataProvider=new ExcelDataProvider();
-		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xlsx", "sheet3");
+		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xls", "sheet3");
 		return s;
 	}
 	
-	@Test(description="ÔÚÄ¿Â¼Ò»ÏÂÌí¼ÓÒ»ÆªÎÄÕÂ",dataProvider="name1",priority=3)
+	@Test(description="åœ¨ç›®å½•ä¸€ä¸‹æ·»åŠ ä¸€ç¯‡æ–‡ç« ",dataProvider="name1",priority=3)
 	public void test3(String title,String content,String asserts) throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÎÄÕÂ");
-		webtest.click1("link=Ä¿Â¼Ò»");
-		webtest.click1("link=·¢²¼ÎÄÕÂ");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ–‡ç« ");
+		webtest.click1("link=ç›®å½•ä¸€");
+		webtest.click1("link=å‘å¸ƒæ–‡ç« ");
 		webtest.type("id=title", title);
 		webtest.enterFrame(0);
 		webtest.click1("tag=body");
@@ -91,227 +91,227 @@ public class content extends Admin_Login{
 		webtest.click1("id=submit");
 		assertTrue(webtest.isTextPresent(asserts));
 	}
-	@Test(description="É¾³ıÄ¿Â¼¶ş",priority=4)
+	@Test(description="åˆ é™¤ç›®å½•äºŒ",priority=4)
 	public void test28() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÎÄÕÂ");
-		webtest.click1("link=Î¬»¤ÀàÄ¿");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ–‡ç« ");
+		webtest.click1("link=ç»´æŠ¤ç±»ç›®");
 		webtest.click1("xpath=//li[@data-id='6']/a[@class='deleter']");
 		webtest.click1("xpath=/html/body/div[2]/div/div/div[2]/button[1]");
-		assertTrue(webtest.isTextPresent("Ä¿Â¼¶ş"));
+		assertTrue(webtest.isTextPresent("ç›®å½•äºŒ"));
 	}
-	@Test(description="ÔÚÄ¿Â¼Ò»ÏÂÌí¼ÓÒ»ÆªtitleÎª¿ÕµÄÎÄÕÂ",priority=4)
+	@Test(description="åœ¨ç›®å½•ä¸€ä¸‹æ·»åŠ ä¸€ç¯‡titleä¸ºç©ºçš„æ–‡ç« ",priority=4)
 	public void test4() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÎÄÕÂ");
-		webtest.click1("link=Ä¿Â¼Ò»");
-		webtest.click1("link=·¢²¼ÎÄÕÂ");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ–‡ç« ");
+		webtest.click1("link=ç›®å½•ä¸€");
+		webtest.click1("link=å‘å¸ƒæ–‡ç« ");
 //		webtest.type("id=title", );
 		webtest.enterFrame(0);
 		webtest.click1("tag=body");
-		webtest.type("tag=body", "titleÎª¿Õ");
+		webtest.type("tag=body", "titleä¸ºç©º");
 		webtest.leaveFrame();
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("²»ÄÜÎª¿Õ"));
+		assertTrue(webtest.isTextPresent("ä¸èƒ½ä¸ºç©º"));
 		
 	}
-	@Test(description="ÔÚÄ¿Â¼Ò»ÏÂÌí¼ÓÒ»ÆªÄÚÈİÎª¿ÕµÄÎÄÕÂ",priority=5)
+	@Test(description="åœ¨ç›®å½•ä¸€ä¸‹æ·»åŠ ä¸€ç¯‡å†…å®¹ä¸ºç©ºçš„æ–‡ç« ",priority=5)
 	public void test5() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÎÄÕÂ");
-		webtest.click1("link=Ä¿Â¼Ò»");
-		webtest.click1("link=·¢²¼ÎÄÕÂ");
-		webtest.type("id=title","ÄÚÈİÎª¿Õ" );
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ–‡ç« ");
+		webtest.click1("link=ç›®å½•ä¸€");
+		webtest.click1("link=å‘å¸ƒæ–‡ç« ");
+		webtest.type("id=title","å†…å®¹ä¸ºç©º" );
 //		webtest.enterFrame(0);
 //		webtest.click1("tag=body");
-//		webtest.type("tag=body", "titleÎª¿Õ");
+//		webtest.type("tag=body", "titleä¸ºç©º");
 //		webtest.leaveFrame();
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("²»ÄÜÎª¿Õ"));
+		assertTrue(webtest.isTextPresent("ä¸èƒ½ä¸ºç©º"));
 		
 	}
-	@Test(description="¶ÔÎÄÕÂÊäÈëÄÚÈİËÑË÷",priority=6)
+	@Test(description="å¯¹æ–‡ç« è¾“å…¥å†…å®¹æœç´¢",priority=6)
 	public void test6() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÎÄÕÂ");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ–‡ç« ");
 		webtest.type("id=searchWord", "title");
 		webtest.click1("id=submit");
 		assertTrue(webtest.isTextPresent("title"));
 	}
-	@Test(description="Ö±½Óµã»÷ËÑË÷",priority=7)
+	@Test(description="ç›´æ¥ç‚¹å‡»æœç´¢",priority=7)
 	public void test7() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÎÄÕÂ");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ–‡ç« ");
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("ÇëÊäÈëËÑË÷ÄÚÈİ"));
+		assertTrue(webtest.isTextPresent("è¯·è¾“å…¥æœç´¢å†…å®¹"));
 	}
-	@Test(description="Ìí¼Óµ¥Ò³",priority=8)
+	@Test(description="æ·»åŠ å•é¡µ",priority=8)
 	public void test8() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=µ¥Ò³");
-		webtest.click1("link=Ìí¼Óµ¥Ò³");
-		webtest.type("id=title", "µÚÒ»¸öµ¥Ò³title");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=å•é¡µ");
+		webtest.click1("link=æ·»åŠ å•é¡µ");
+		webtest.type("id=title", "ç¬¬ä¸€ä¸ªå•é¡µtitle");
 		webtest.enterFrame(0);
 		webtest.click1("tag=body");
-		webtest.type("tag=body", "µÚÒ»¸öµ¥Ò³ÄÚÈİ");
+		webtest.type("tag=body", "ç¬¬ä¸€ä¸ªå•é¡µå†…å®¹");
 		webtest.leaveFrame();
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("µÚÒ»¸öµ¥Ò³title"));
+		assertTrue(webtest.isTextPresent("ç¬¬ä¸€ä¸ªå•é¡µtitle"));
 	}
-	@Test(description="Ìí¼ÓtitleÎª¿ÕµÄµ¥Ò³",priority=9)
+	@Test(description="æ·»åŠ titleä¸ºç©ºçš„å•é¡µ",priority=9)
 	public void test9() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=µ¥Ò³");
-		webtest.click1("link=Ìí¼Óµ¥Ò³");
-//		webtest.type("id=title", "µÚÒ»¸öµ¥Ò³title");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=å•é¡µ");
+		webtest.click1("link=æ·»åŠ å•é¡µ");
+//		webtest.type("id=title", "ç¬¬ä¸€ä¸ªå•é¡µtitle");
 		webtest.enterFrame(0);
 		webtest.click1("tag=body");
-		webtest.type("tag=body", "µÚÒ»¸öµ¥Ò³ÄÚÈİ");
+		webtest.type("tag=body", "ç¬¬ä¸€ä¸ªå•é¡µå†…å®¹");
 		webtest.leaveFrame();
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("²»ÄÜÎª¿Õ"));
+		assertTrue(webtest.isTextPresent("ä¸èƒ½ä¸ºç©º"));
 	}
-	@Test(description="Ìí¼ÓÄÚÈİÎª¿ÕµÄµ¥Ò³",priority=10)
+	@Test(description="æ·»åŠ å†…å®¹ä¸ºç©ºçš„å•é¡µ",priority=10)
 	public void test10() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=µ¥Ò³");
-		webtest.click1("link=Ìí¼Óµ¥Ò³");
-		webtest.type("id=title", "µÚ¶ş¸öµ¥Ò³title");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=å•é¡µ");
+		webtest.click1("link=æ·»åŠ å•é¡µ");
+		webtest.type("id=title", "ç¬¬äºŒä¸ªå•é¡µtitle");
 //		webtest.enterFrame(0);
 //		webtest.click1("tag=body");
-//		webtest.type("tag=body", "µÚÒ»¸öµ¥Ò³ÄÚÈİ");
+//		webtest.type("tag=body", "ç¬¬ä¸€ä¸ªå•é¡µå†…å®¹");
 //		webtest.leaveFrame();
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("µÚÒ»¸öµ¥Ò³title"));
+		assertTrue(webtest.isTextPresent("ç¬¬ä¸€ä¸ªå•é¡µtitle"));
 	}
-	@Test(description="¶Ôµ¥Ò³ÊäÈëÄÚÈİËÑË÷",priority=11)
+	@Test(description="å¯¹å•é¡µè¾“å…¥å†…å®¹æœç´¢",priority=11)
 	public void test11() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=µ¥Ò³");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=å•é¡µ");
 		webtest.type("id=searchWord", "title");
 		webtest.click1("id=submit");
 		assertTrue(webtest.isTextPresent("title"));
 	}
-	@Test(description="µ¥Ò³Ö±½Óµã»÷ËÑË÷",priority=12)
+	@Test(description="å•é¡µç›´æ¥ç‚¹å‡»æœç´¢",priority=12)
 	public void test12() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=µ¥Ò³");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=å•é¡µ");
 		webtest.click1("xpath=//input[@id='submit']");
-		assertTrue(webtest.isTextPresent("ÇëÊäÈëËÑË÷ÄÚÈİ"));
+		assertTrue(webtest.isTextPresent("è¯·è¾“å…¥æœç´¢å†…å®¹"));
 	}
-	@Test(description="²©¿ÍÏÂÌí¼ÓÀàÄ¿",priority=13)
+	@Test(description="åšå®¢ä¸‹æ·»åŠ ç±»ç›®",priority=13)
 	public void test13() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=²©¿Í");
-		webtest.click1("link=Î¬»¤ÀàÄ¿");
-		webtest.type("id=children[]", "µÚÒ»ÀàÄ¿");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=åšå®¢");
+		webtest.click1("link=ç»´æŠ¤ç±»ç›®");
+		webtest.type("id=children[]", "ç¬¬ä¸€ç±»ç›®");
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("µÚÒ»ÀàÄ¿"));
+		assertTrue(webtest.isTextPresent("ç¬¬ä¸€ç±»ç›®"));
 	}
-	@Test(description="µÚÒ»ÀàÄ¿ÏÂÌí¼Ó²©¿Í",priority=14)
+	@Test(description="ç¬¬ä¸€ç±»ç›®ä¸‹æ·»åŠ åšå®¢",priority=14)
 	public void test14() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=²©¿Í");
-		webtest.click1("link=µÚÒ»ÀàÄ¿");
-		webtest.click1("link=·¢²¼²©¿Í");
-		webtest.type("id=title", "²©¿Ítitle");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=åšå®¢");
+		webtest.click1("link=ç¬¬ä¸€ç±»ç›®");
+		webtest.click1("link=å‘å¸ƒåšå®¢");
+		webtest.type("id=title", "åšå®¢title");
 		webtest.enterFrame(0);
 		webtest.click1("tag=body");
-		webtest.type("tag=body", "µÚÒ»¸öµ¥Ò³ÄÚÈİ");
+		webtest.type("tag=body", "ç¬¬ä¸€ä¸ªå•é¡µå†…å®¹");
 		webtest.leaveFrame();
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("²©¿Ítitle"));
+		assertTrue(webtest.isTextPresent("åšå®¢title"));
 		
 	}
-	@Test(description="µÚÒ»ÀàÄ¿ÏÂÌí¼ÓtitleÎª¿ÕµÄ²©¿Í",priority=15)
+	@Test(description="ç¬¬ä¸€ç±»ç›®ä¸‹æ·»åŠ titleä¸ºç©ºçš„åšå®¢",priority=15)
 	public void test15() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=²©¿Í");
-		webtest.click1("link=µÚÒ»ÀàÄ¿");
-		webtest.click1("link=·¢²¼²©¿Í");
-//		webtest.type("id=title", "²©¿Ítitle");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=åšå®¢");
+		webtest.click1("link=ç¬¬ä¸€ç±»ç›®");
+		webtest.click1("link=å‘å¸ƒåšå®¢");
+//		webtest.type("id=title", "åšå®¢title");
 		webtest.enterFrame(0);
 		webtest.click1("tag=body");
-		webtest.type("tag=body", "µÚÒ»¸öµ¥Ò³ÄÚÈİ");
+		webtest.type("tag=body", "ç¬¬ä¸€ä¸ªå•é¡µå†…å®¹");
 		webtest.leaveFrame();
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("²»ÄÜÎª¿Õ"));
+		assertTrue(webtest.isTextPresent("ä¸èƒ½ä¸ºç©º"));
 		
 	}
-	@Test(description="µÚÒ»ÀàÄ¿ÏÂÌí¼ÓÄÚÈİÎª¿Õ²©¿Í",priority=16)
+	@Test(description="ç¬¬ä¸€ç±»ç›®ä¸‹æ·»åŠ å†…å®¹ä¸ºç©ºåšå®¢",priority=16)
 	public void test16() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=²©¿Í");
-		webtest.click1("link=µÚÒ»ÀàÄ¿");
-		webtest.click1("link=·¢²¼²©¿Í");
-		webtest.type("id=title", "²©¿Ítitle");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=åšå®¢");
+		webtest.click1("link=ç¬¬ä¸€ç±»ç›®");
+		webtest.click1("link=å‘å¸ƒåšå®¢");
+		webtest.type("id=title", "åšå®¢title");
 //		webtest.enterFrame(0);
 //		webtest.click1("tag=body");
-//		webtest.type("tag=body", "µÚÒ»¸öµ¥Ò³ÄÚÈİ");
+//		webtest.type("tag=body", "ç¬¬ä¸€ä¸ªå•é¡µå†…å®¹");
 //		webtest.leaveFrame();
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("²»ÄÜÎª¿Õ"));
+		assertTrue(webtest.isTextPresent("ä¸èƒ½ä¸ºç©º"));
 		
 	}
-	@Test(description="¶Ô²©¿ÍÊäÈëÄÚÈİËÑË÷",priority=17)
+	@Test(description="å¯¹åšå®¢è¾“å…¥å†…å®¹æœç´¢",priority=17)
 	public void test17() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=²©¿Í");
-		webtest.type("id=searchWord", "²©¿Ítitle");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=åšå®¢");
+		webtest.type("id=searchWord", "åšå®¢title");
 		webtest.click1("id=submit");
 		assertTrue(webtest.isTextPresent("title"));
 	}
-	@Test(description="²©¿ÍÖ±½Óµã»÷ËÑË÷",priority=18)
+	@Test(description="åšå®¢ç›´æ¥ç‚¹å‡»æœç´¢",priority=18)
 	public void test18() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=²©¿Í");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=åšå®¢");
 		webtest.click1("xpath=//input[@id='submit']");
-		assertTrue(webtest.isTextPresent("ÇëÊäÈëËÑË÷ÄÚÈİ"));
+		assertTrue(webtest.isTextPresent("è¯·è¾“å…¥æœç´¢å†…å®¹"));
 	}
-	@Test(description="Ìí¼ÓÊÖ²áÏÂµÄÀàÄ¿",priority=19)
+	@Test(description="æ·»åŠ æ‰‹å†Œä¸‹çš„ç±»ç›®",priority=19)
 	public void test19() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÊÖ²á");
-		webtest.click1("link=Ìí¼Ó");
-		webtest.type("id=title", "ÓÃ»§ÊÖ²á");
-		webtest.type("id=alias", "ÕâÊÇÓÃ»§ÊÖ²á");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ‰‹å†Œ");
+		webtest.click1("link=æ·»åŠ ");
+		webtest.type("id=title", "ç”¨æˆ·æ‰‹å†Œ");
+		webtest.type("id=alias", "è¿™æ˜¯ç”¨æˆ·æ‰‹å†Œ");
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("xpath=//*[@id='submit']");
-		assertTrue(webtest.isTextPresent("ÓÃ»§ÊÖ²á"));
+		assertTrue(webtest.isTextPresent("ç”¨æˆ·æ‰‹å†Œ"));
 	}
 	@DataProvider
 	public Object[][] name3() throws IOException {
@@ -319,42 +319,42 @@ public class content extends Admin_Login{
 		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xls", "sheet4");
 		return s;
 	}
-	@Test(description="ÓÃ»§ÊÖ²áÏÂÃæÌí¼ÓÕÂ½Ú",priority=20,dataProvider="name3")
+	@Test(description="ç”¨æˆ·æ‰‹å†Œä¸‹é¢æ·»åŠ ç« èŠ‚",priority=20,dataProvider="name3")
 	public void test20(String title1,String title2) throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÊÖ²á");
-		webtest.click1("link=ÓÃ»§ÊÖ²á");
-		webtest.click1("link=ÕÂ½Ú");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ‰‹å†Œ");
+		webtest.click1("link=ç”¨æˆ·æ‰‹å†Œ");
+		webtest.click1("link=ç« èŠ‚");
 		webtest.type("id=title[]", title1);
 		String js_bottom = "var q=document.documentElement.scrollTop=10000";
 		webtest.runJs(js_bottom);
 		webtest.click1("xpath=//*[@id='submit']");
 		assertTrue(webtest.isTextPresent(title2));
 	}
-	@Test(description="ÔÚÊÖ²áÏÂ½øĞĞËÑË÷",priority=21)
+	@Test(description="åœ¨æ‰‹å†Œä¸‹è¿›è¡Œæœç´¢",priority=21)
 	public void test21() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÊÖ²á");
-		webtest.type("id=searchWord", "¹ØÓÚÎÒÃÇ");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ‰‹å†Œ");
+		webtest.type("id=searchWord", "å…³äºæˆ‘ä»¬");
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("¹ØÓÚÎÒÃÇ"));
+		assertTrue(webtest.isTextPresent("å…³äºæˆ‘ä»¬"));
 		
 	}
-	@Test(description="ÔÚÊÖ²áÏÂ½øĞĞËÑË÷",priority=21)
+	@Test(description="åœ¨æ‰‹å†Œä¸‹è¿›è¡Œæœç´¢",priority=21)
 	public void test22() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÊÖ²á");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ‰‹å†Œ");
 		webtest.click1("id=submit");
-		assertTrue(webtest.isTextPresent("ÇëÊäÈëËÑË÷ÄÚÈİ"));
+		assertTrue(webtest.isTextPresent("è¯·è¾“å…¥æœç´¢å†…å®¹"));
 	}
-	@Test(description="ÊÖ²áÏÂµÄÉèÖÃÏÔÊ¾µÚÒ»¸öoption",priority=22)
+	@Test(description="æ‰‹å†Œä¸‹çš„è®¾ç½®æ˜¾ç¤ºç¬¬ä¸€ä¸ªoption",priority=22)
 	public void test23() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÊÖ²á");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ‰‹å†Œ");
 		webtest.click1("xpath=/html/body/div/div[1]/div/div/div/div/a[2]");
 		webtest.click1("id=index");
 		webtest.click1("xpath=//option[@value='1']");
@@ -362,14 +362,14 @@ public class content extends Admin_Login{
 		ReadProperties u=new ReadProperties();
 		String url=u.getPropertyValue("fronturl");
 		webtest.open(url);
-		webtest.click1("link=ÊÖ²á");
-		assertTrue(webtest.isTextPresent("³£¼ûÎÊÌâ"));
+		webtest.click1("link=æ‰‹å†Œ");
+		assertTrue(webtest.isTextPresent("å¸¸è§é—®é¢˜"));
 	}
-	@Test(description="ÊÖ²áÏÂµÄÉèÖÃÏÔÊ¾ÊÖ²áÁĞ±í",priority=22)
+	@Test(description="æ‰‹å†Œä¸‹çš„è®¾ç½®æ˜¾ç¤ºæ‰‹å†Œåˆ—è¡¨",priority=22)
 	public void test24() throws IOException {
 		testLogin();
-		webtest.click1("link=ÄÚÈİ");
-		webtest.click1("link=ÊÖ²á");
+		webtest.click1("link=å†…å®¹");
+		webtest.click1("link=æ‰‹å†Œ");
 		webtest.click1("xpath=/html/body/div/div[1]/div/div/div/div/a[2]");
 		webtest.click1("id=index");
 		webtest.click1("xpath=//option[@value='list']");
@@ -377,8 +377,8 @@ public class content extends Admin_Login{
 		ReadProperties u=new ReadProperties();
 		String url=u.getPropertyValue("fronturl");
 		webtest.open(url);
-		webtest.click1("link=ÊÖ²á");
-		assertTrue(webtest.isTextPresent("ÓÃ»§ÊÖ²á"));
-		assertTrue(webtest.isTextPresent("³£¼ûÎÊÌâ"));
+		webtest.click1("link=æ‰‹å†Œ");
+		assertTrue(webtest.isTextPresent("ç”¨æˆ·æ‰‹å†Œ"));
+		assertTrue(webtest.isTextPresent("å¸¸è§é—®é¢˜"));
 	}
 }
