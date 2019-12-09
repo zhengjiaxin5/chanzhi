@@ -18,7 +18,7 @@ public class content extends Admin_Login{
 	@DataProvider
 	public Object[][] name() throws IOException {
 		ExcelDataProvider excelDataProvider=new ExcelDataProvider();
-		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xls", "sheet2");
+		Object[][] s=excelDataProvider.getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\nnn.xls", "sheet2");
 		return s;
 	}
 	
@@ -70,7 +70,7 @@ public class content extends Admin_Login{
 	@DataProvider
 	public Object[][] name1() throws IOException {
 		ExcelDataProvider excelDataProvider=new ExcelDataProvider();
-		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xls", "sheet3");
+		Object[][] s=excelDataProvider.getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\nnn.xls", "sheet3");
 		return s;
 	}
 	
@@ -316,7 +316,7 @@ public class content extends Admin_Login{
 	@DataProvider
 	public Object[][] name3() throws IOException {
 		ExcelDataProvider excelDataProvider=new ExcelDataProvider();
-		Object[][] s=excelDataProvider.getTestDataByExcel("F://nnn.xls", "sheet4");
+		Object[][] s=excelDataProvider.getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\nnn.xls", "sheet4");
 		return s;
 	}
 	@Test(description="用户手册下面添加章节",priority=20,dataProvider="name3")
