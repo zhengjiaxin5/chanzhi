@@ -28,7 +28,7 @@ public class PicManage extends Admin_Login{
 	
 	@DataProvider(name="watermark")
 	public  Object[][] getWatermark() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("D:\\demo\\data\\chanzhieps.xlsx","watermark");
+		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps.xlsx","watermark");
 		 return user;
 	}
 	@Test(dataProvider ="watermark",description="设置图片水印开启数据驱动")
