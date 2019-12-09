@@ -12,7 +12,7 @@ public class demo2 extends Admin_Login{
 	@DataProvider(name = "con2")
 	public static Object[][] words1() throws Exception {
 		ExcelDataProvider d = new ExcelDataProvider();
-		return d.getTestDataByExcel("E:\\exc2.xlsx", "Sheet1");
+		return d.getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\exc2.xlsx", "Sheet1");
 	}
 	@Test(dataProvider = "con2",description="熊掌号勾选产品")
 	public void test2(String a1,String a2,String a3) throws Exception{
