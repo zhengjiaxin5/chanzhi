@@ -20,7 +20,7 @@ public class demo3 extends Admin_Login {
 	@DataProvider(name = "con1")
 	public static Object[][] words1() throws Exception {
 		ExcelDataProvider d = new ExcelDataProvider();
-		return d.getTestDataByExcel("E:\\exc1.xlsx", "Sheet1");
+		return d.getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\exc1.xlsx", "Sheet1");
 	}
 
 	@Test(dataProvider = "con1",description="确认收货时期和订单过期时间")
