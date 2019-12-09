@@ -10,7 +10,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test20_menu extends Admin_Login{
-	@Test(description="网站后台的菜单的增删")
+	@Test(description="缃戠珯鍚庡彴鐨勮彍鍗曠殑澧炲垹")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[7]/a");
@@ -20,10 +20,10 @@ public class test20_menu extends Admin_Login{
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
 		webtest.click("id=submit");
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[1]/a");
-		assertTrue(webtest.isTextPresent("产品"));
+		assertTrue(webtest.isTextPresent("浜у搧"));
 //		
 	}
-	@Test(description="网站后台的菜单的增删")
+	@Test(description="缃戠珯鍚庡彴鐨勮彍鍗曠殑澧炲垹")
 	public void test2() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[7]/a");
@@ -33,6 +33,6 @@ public class test20_menu extends Admin_Login{
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
 		webtest.click("id=submit");
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[1]/a");
-		assertTrue(webtest.notisTextPresent("订单"));
+		assertTrue(webtest.notisTextPresent("璁㈠崟"));
 	}
 }

@@ -11,7 +11,7 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test25_vipallselect extends Admin_Login{
-	@Test(description="»áÔ±Ä£¿éµÄÈ«Ñ¡¹¦ÄÜ")
+	@Test(description="ä¼šå‘˜æ¨¡å—çš„å…¨é€‰åŠŸèƒ½")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[4]/a");
 		webtest.click("xpath=//*[@id=\"userList\"]/tbody/tr[3]/td[1]/input");
@@ -19,7 +19,7 @@ public class test25_vipallselect extends Admin_Login{
 		webtest.click("xpath=//*[@id=\"submit\"]");
 		webtest.type("id=password", "admin");
 		webtest.enter();
-		assertTrue(webtest.isTextPresent("É¾³ı³É¹¦"));
+		assertTrue(webtest.isTextPresent("åˆ é™¤æˆåŠŸ"));
 		
 	}
 }

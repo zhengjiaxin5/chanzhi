@@ -10,13 +10,13 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test17_CDN extends Admin_Login{
-	@Test(description="CDN的开启与关闭")
+	@Test(description="CDN鐨勫紑鍚笌鍏抽棴")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[5]/a");
 		webtest.click("xpath=//*[@id=\"open1\"]");
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
 		webtest.click("id=submit");
-		assertTrue(webtest.isTextPresent("设置成功"));
+		assertTrue(webtest.isTextPresent("璁剧疆鎴愬姛"));
 	}
 }

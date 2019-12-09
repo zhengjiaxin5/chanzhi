@@ -10,13 +10,13 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test5_name extends Admin_Login{
-	@Test(description="ÍøÕ¾Ãû³ÆµÄ¸ü¸Ä")
+	@Test(description="ç½‘ç«™åç§°çš„æ›´æ”¹")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
-		webtest.type("xpath=//*[@id=\"name\"]","²õÖªÆóÒµ123");
+		webtest.type("xpath=//*[@id=\"name\"]","è‰çŸ¥ä¼ä¸š123");
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
 		webtest.click("id=submit");
 		webtest.open("http://127.0.0.1/chanzhieps/www/");
-		assertTrue(webtest.isTextPresent("²õÖªÆóÒµ123"));
+		assertTrue(webtest.isTextPresent("è‰çŸ¥ä¼ä¸š123"));
 	}
 }

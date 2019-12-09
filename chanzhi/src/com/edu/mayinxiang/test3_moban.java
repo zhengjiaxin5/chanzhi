@@ -11,12 +11,12 @@ import com.webtest.core.BaseTest;
 import com.webtest.demo.Admin_Login;
 
 public class test3_moban extends Admin_Login{
-	@Test(description="ÒÆ¶¯Ä£°åµÄÉèÖÃ")
+	@Test(description="ç§»åŠ¨æ¨¡æ¿çš„è®¾ç½®")
 	public void test() {
 		webtest.click("xpath=//*[@id=\"primaryNavbar\"]/ul[1]/li[8]/a");
 		webtest.click("xpath=//*[@id=\"mobileTemplate1\"]");
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
 		webtest.click("id=submit");
-		assertTrue(webtest.isTextPresent("ÉèÖÃ³É¹¦"));
+		assertTrue(webtest.isTextPresent("è®¾ç½®æˆåŠŸ"));
 	}
 }
