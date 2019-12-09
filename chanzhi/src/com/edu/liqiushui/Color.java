@@ -17,14 +17,14 @@ public class Color extends Admin_Login{
 		 return user;
 	}
 
-	@Test(dataProvider ="color",description="Ìí¼ÓÓĞÑÕÉ«Çø¿é")
+	@Test(dataProvider ="color",description="æ·»åŠ æœ‰é¢œè‰²åŒºå—")
 	public void color0(String icon,String border,String top,String right,String bottom,String left,String title,String background,String text,String link,String back) {
-		webtest.click("link=Éè¼Æ");
-		webtest.click("link=Çø¿é");
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.type("id=title","ÎÒÓĞÑÕÉ«");//Ãû³ÆÌîĞ´
-		webtest.click("link=ÑùÊ½");
-		//Êı¾İÇı¶¯
+		webtest.click("link=è®¾è®¡");
+		webtest.click("link=åŒºå—");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.type("id=title","æˆ‘æœ‰é¢œè‰²");//åç§°å¡«å†™
+		webtest.click("link=æ ·å¼");
+		//æ•°æ®é©±åŠ¨
 		webtest.type("xpath=//*[@id=\"params[custom][blank][iconColor]\"]",icon);
 		webtest.type("xpath=//*[@id=\"params[custom][blank][borderColor]\"]",border);
 		webtest.type("xpath=//*[@id=\"params[custom][blank][paddingTop]\"]",top);

@@ -7,22 +7,22 @@ import org.testng.annotations.Test;
 import com.webtest.demo.Admin_Login;
 
 public class DelBlock extends Admin_Login{
-	@Test(priority = 1,description="Çø¿é×Ô¶¨ÒåÖĞÌí¼ÓÒ»¸öÇø¿é")
+	@Test(priority = 1,description="åŒºå—è‡ªå®šä¹‰ä¸­æ·»åŠ ä¸€ä¸ªåŒºå—")
 	public void test9() throws InterruptedException {
-		webtest.click("link=Éè¼Æ");
-		webtest.click("link=Çø¿é");
-		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//Ìí¼Ó
-		webtest.type("id=title","ÕâÊÇÒ»¸öÇø¿é°¡");//Ãû³ÆÌîĞ´
-		webtest.typeAndClear("xpath=//*[@id=\"params[moreText]\"]","ÓÒÉÏ½Ç");//Ìí¼Ó¸ü¶àÁ¬½Ó
+		webtest.click("link=è®¾è®¡");
+		webtest.click("link=åŒºå—");
+		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[1]/div/a");//æ·»åŠ 
+		webtest.type("id=title","è¿™æ˜¯ä¸€ä¸ªåŒºå—å•Š");//åç§°å¡«å†™
+		webtest.typeAndClear("xpath=//*[@id=\"params[moreText]\"]","å³ä¸Šè§’");//æ·»åŠ æ›´å¤šè¿æ¥
 		webtest.click("id=submit");
 		Thread.sleep(5000);
-		assertTrue(webtest.isTextPresent("±£´æ³É¹¦"));
+		assertTrue(webtest.isTextPresent("ä¿å­˜æˆåŠŸ"));
 	}
-	@Test(priority = 2,description="É¾³ıÒ»¸öÇø¿é")
+	@Test(priority = 2,description="åˆ é™¤ä¸€ä¸ªåŒºå—")
 	public void test10() throws InterruptedException {
-		webtest.mouseoverElement("xpath=/html/body/div/div[2]/div[1]/div/div[2]/span[1]");//Êó±ê·ÅÔÚ¸ÃÇø¿éÉÏ
+		webtest.mouseoverElement("xpath=/html/body/div/div[2]/div[1]/div/div[2]/span[1]");//é¼ æ ‡æ”¾åœ¨è¯¥åŒºå—ä¸Š
 		webtest.click("xpath=/html/body/div/div[2]/div[1]/div/div[2]/span[1]/a[2]/i");
-		webtest.click("xpath=/html/body/div[2]/div/div/div[2]/button[1]");//µã»÷È·ÈÏ
+		webtest.click("xpath=/html/body/div[2]/div/div/div[2]/button[1]");//ç‚¹å‡»ç¡®è®¤
 	}
 	
 	

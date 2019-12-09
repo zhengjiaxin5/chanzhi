@@ -17,9 +17,9 @@ public class Export extends Admin_Login{
 		 return user;
 	}
 	
-	@Test(dataProvider ="export",description="导出主题")
+	@Test(dataProvider ="export",description="瀵煎嚭涓婚")
 	public void export0(String name,String code,String author,String email,String demo,String qq) throws InterruptedException {
-		webtest.click("link=设计");
+		webtest.click("link=璁捐");
 		webtest.click("xpath=//*[@id=\"internalSection\"]/div[5]/div/a/img");
 		webtest.click("xpath=//*[@id=\"internalSection\"]/div[5]/div/div[2]/a");
 		webtest.click("xpath=//*[@id=\"dsMenu\"]/div/a[2]");
