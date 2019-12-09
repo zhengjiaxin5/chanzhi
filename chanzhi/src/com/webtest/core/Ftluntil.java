@@ -1,6 +1,5 @@
 package com.webtest.core;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.StringWriter;
 import java.util.Locale;
 import java.util.Map;
@@ -19,22 +18,19 @@ public class Ftluntil {
     }   
     
     private String executeFreemarker(Map context)throws Exception{   
-
+    	String content="";
         Configuration cfg = new Configuration();   
         cfg.setDirectoryForTemplateLoading(   
                 new File(getTemplatePath()));   
         cfg.setEncoding(Locale.CHINA, "UTF-8");
-//        cfg.setObjectWrapper(new DefaultObjectWrapper());              
-//                  
+        cfg.setObjectWrapper(new DefaultObjectWrapper());              
+        cfg.setCacheStorage(new freemarker.cache.MruCacheStorage(20, 250));                      
         Template temp = cfg.getTemplate(getTemplate());    
         StringWriter out = new StringWriter();   
-        temp.process(context, out);
-        
-        temp.process(context, new FileWriter
-        		(new File("f://demo//a.html"))); 
+        temp.process(context, out);   
         //System.out.print(out.toString());
         return out.toString();
-    }     
+    }   
   
     public String getTemplate() {   
         // TODO Auto-generated method stub   
