@@ -12,7 +12,7 @@ import com.webtest.dataprovider.ExcelDataProvider;
 public class ChangeSizePic extends Admin_Login{
 	@DataProvider(name="change")
 	public  Object[][] changesize() throws IOException{
-		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("D:\\demo\\data\\chanzhieps.xlsx","change");
+		Object[][] user= new  ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\chanzhieps.xlsx","change");
 		 return user;
 	}
 
