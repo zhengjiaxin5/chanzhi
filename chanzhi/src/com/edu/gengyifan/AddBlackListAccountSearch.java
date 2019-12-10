@@ -2,6 +2,7 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
 import java.net.UnknownHostException;
 
 import org.testng.annotations.Test;
@@ -9,8 +10,8 @@ import org.testng.annotations.Test;
 import com.webtest.core.BaseTest;
 
 public class AddBlackListAccountSearch extends BaseTest{
-	@Test
-	public void testAddBlackListAccountSearch() throws UnknownHostException {
+	@Test(description="添加黑名单-账号-搜索测试")
+	public void testAddBlackListAccountSearch() throws IOException {
 		webtest.addWhiteListIP();
 		webtest.testCloseSafety();
 		webtest.frontLogin("demo", "demo");

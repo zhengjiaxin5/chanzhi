@@ -1,12 +1,15 @@
 package com.edu.gengyifan;
 
 import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 import com.webtest.core.BaseTest;
 
 public class BindingMail extends BaseTest{
-	@Test
-	public void testBinDingMail() {
+	@Test(description="会员邮箱绑定测试")
+	public void testBinDingMail() throws IOException {
 		webtest.frontLogin("demo","demo");
 		webtest.click("xpath=//*[@id=\"checkEmail1\"]");
 		webtest.click("xpath=//*[@id=\"submit\"]");	

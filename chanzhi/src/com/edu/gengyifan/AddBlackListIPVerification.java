@@ -2,13 +2,15 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class AddBlackListIPVerification extends BaseTest{
-	@Test
-	public void testAddBlackListIPVerification() {
+	@Test(description="添加黑名单-IP-验证码测试")
+	public void testAddBlackListIPVerification() throws IOException {
 		webtest.addWhiteListAccount();
 		webtest.click("id=captcha1");
 		webtest.click("id=submit");

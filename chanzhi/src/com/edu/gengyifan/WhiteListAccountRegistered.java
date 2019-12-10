@@ -1,6 +1,6 @@
 package com.edu.gengyifan;
 
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.assertFalse;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -12,14 +12,15 @@ import com.webtest.core.BaseTest;
 import com.webtest.dataprovider.ExcelDataProvider;
 import com.webtest.utils.ReadProperties;
 
-public class AddBlackListIPRegistered extends BaseTest{
-	@DataProvider(name="AddBlackListIPRegistered")
+public class WhiteListAccountRegistered extends BaseTest{
+	@DataProvider(name="WhiteListAccountRegistered")
 	public Object[][] dataToTest() throws IOException{
 		Object[][] register = new ExcelDataProvider().getTestDataByExcel("C:\\ruanjian\\jenkins\\workspace\\chanzhi3\\chanzhi\\data\\AddBlackListAccountRegisteredData.xlsx", "sheet1");
 		return register;
 	}
-	@Test(dataProvider="AddBlackListIPRegistered",priority=1,description="添加黑名单-IP-注册测试1")
-	public void testAddBlackListIPRegistered(String username,String realname,String email,String password,String password0) throws IOException {
+	@Test(dataProvider="WhiteListAccountRegistered",priority=1,description="白名单-账号-注册测试1")
+	public void testWhiteListAccountRegistered(String username,String realname,String email,String password,String password0) throws IOException {
+		webtest.addWhiteListIP();
 		webtest.addWhiteListAccount();
 		ReadProperties u = new ReadProperties();
 		String url = u.getPropertyValue("front_url");
@@ -32,11 +33,9 @@ public class AddBlackListIPRegistered extends BaseTest{
 		webtest.type("id=password2", password0);
 		webtest.click("id=submit");
 	}
-	@Test(priority=2,description="添加黑名单-IP-注册测试2")
-	public void testAfterAddBlackListIPRegistered() throws IOException {
+	@Test(priority=2,description="白名单-账号-注册测试2")
+	public void testAfterWhiteListAccountRegistered() throws IOException {
 		webtest.backgroundLogin("137554616", "fcschalke04");
-		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[3]/a");
-		//断言
-		assertTrue(webtest.isTextPresent("系统检测到您的行为存在异常"));
+		assertFalse(webtest.isTextPresent("系统检测到您的行为存在异常"));
 	}
 }

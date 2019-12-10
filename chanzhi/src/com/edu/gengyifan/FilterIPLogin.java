@@ -2,16 +2,20 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.utils.ReadProperties;
 
 public class FilterIPLogin extends BaseTest{
-	@Test
-	public void testFilterIPLogin() {
+	@Test(description="过滤-IP-登录测试")
+	public void testFilterIPLogin() throws IOException {
 		webtest.addWhiteListAccount();
-		//进入前台界面
-		webtest.open("http://localhost/chanzhieps/www/index.php/user-login.html");
+		ReadProperties u = new ReadProperties();
+		String url = u.getPropertyValue("front_url");
+		webtest.open("url");
 		//循环登录
 		webtest.type("id=account", "demo");
 		webtest.type("id=password", "demo0");

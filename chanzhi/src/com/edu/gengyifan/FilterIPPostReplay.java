@@ -2,13 +2,15 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class FilterIPPostReplay extends BaseTest{
-	@Test
-	public void testFilterIPPostReplay() {
+	@Test(description="过滤-IP-回帖测试")
+	public void testFilterIPPostReplay() throws IOException {
 		webtest.addWhiteListAccount();
 		webtest.frontLogin("demo","demo");
 		webtest.click("link=论坛");

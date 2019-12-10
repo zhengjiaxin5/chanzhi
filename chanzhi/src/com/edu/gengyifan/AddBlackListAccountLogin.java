@@ -2,20 +2,27 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
 import java.net.UnknownHostException;
 
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.utils.ReadProperties;
 
 public class AddBlackListAccountLogin extends BaseTest {
-	@Test
-	public void testAddBlackListAccountLogin() throws UnknownHostException {
+	@Test(description="添加黑名单-账号-登录测试")
+	public void testAddBlackListAccountLogin() throws IOException {
 		webtest.testCloseSafety();
 		webtest.addWhiteListIP();
-		for (int i = 0; i < 11; i++) {
-			webtest.type("id=account", "demo");
-			webtest.type("id=password", "demo0");
+		//进入前台界面
+		ReadProperties u = new ReadProperties();
+		String url = u.getPropertyValue("front_url");
+		webtest.open("url");
+		//循环登录
+		webtest.type("id=account", "demo");
+		webtest.type("id=password", "demo0");
+		for(int i=0;i<11;i++) {
 			webtest.click("id=submit");
 		}
 		webtest.backgroundLogin("137554616", "fcschalke04");

@@ -2,13 +2,15 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class FilterIPSearch extends BaseTest{
-	@Test
-	public void testFilterIPSearch() {
+	@Test(description="过滤-IP-搜索测试")
+	public void testFilterIPSearch() throws IOException {
 		webtest.addWhiteListAccount();
 		webtest.frontLogin("demo","demo");
 		for(int i=0;i<9;i++) {

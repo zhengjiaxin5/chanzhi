@@ -1,8 +1,11 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=0b438d5f6ce16b783f99e03b3eee01c25ac9eabe
 eclipse.preferences.version=1
-<<<<<<< HEAD
-encoding//src/com/edu/yanxiaoqian=UTF-8
-=======
+encoding//src/com/edu/gengyifan=UTF-8
+encoding//src/com/edu/gengyifan/AddBlackListIPLogin.java=UTF-8
+encoding//src/com/edu/gengyifan/AddBlackListIPPostReplay.java=UTF-8
 encoding//src/com/edu/mayinxiang=UTF-8
->>>>>>> 0b438d5f6ce16b783f99e03b3eee01c25ac9eabe
+encoding//src/com/edu/yanxiaoqian=UTF-8
 encoding//src/com/webtest/core/MailUtil.java=UTF-8
 encoding//src/com/webtest/core/WebDriverEngine.java=UTF-8

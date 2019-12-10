@@ -2,6 +2,7 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
 import java.net.UnknownHostException;
 
 import org.testng.annotations.Test;
@@ -9,8 +10,8 @@ import org.testng.annotations.Test;
 import com.webtest.core.BaseTest;
 
 public class AddBlackListAccountVerification extends BaseTest{
-	@Test
-	public void testAddBlackListAccountVerification() throws UnknownHostException {
+	@Test(description="添加黑名单-账号-验证码测试")
+	public void testAddBlackListAccountVerification() throws IOException {
 		webtest.addWhiteListIP();
 		webtest.backgroundLogin("137554616", "fcschalke04");
 		webtest.click("id=captcha1");

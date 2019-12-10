@@ -2,6 +2,7 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
 import java.net.UnknownHostException;
 
 import org.testng.annotations.Test;
@@ -9,8 +10,8 @@ import org.testng.annotations.Test;
 import com.webtest.core.BaseTest;
 
 public class FilterAccountPostReplay extends BaseTest{
-	@Test
-	public void testFilterAccountLogin() throws UnknownHostException {
+	@Test(description="过滤-账号-回帖测试")
+	public void testFilterAccountLogin() throws IOException {
 		webtest.addWhiteListIP();
 		webtest.frontLogin("demo","demo");
 		webtest.click("link=论坛");

@@ -2,13 +2,15 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class Filter extends BaseTest{
-	@Test
-	public void testFilter() {
+	@Test(description="过滤器测试")
+	public void testFilter() throws IOException {
 		webtest.backgroundLogin("137554616", "fcschalke04");
 		webtest.click("xpath=//*[@id=\"filterFunction1\"]");
 		webtest.click("id=submit");

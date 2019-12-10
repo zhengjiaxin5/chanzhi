@@ -1,12 +1,15 @@
 package com.edu.gengyifan;
 
 import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 import com.webtest.core.BaseTest;
 
 public class FormValidation extends BaseTest{
-	@Test
-	public void testFormValidation() {
+	@Test(description="验证码功能测试")
+	public void testFormValidation() throws IOException {
 		webtest.backgroundLogin("137554616","fcschalke04");
 		webtest.click("xpath=//*[@id=\"captcha1\"]");
 		webtest.click("xpath=//*[@id=\"submit\"]");	

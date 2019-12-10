@@ -2,13 +2,15 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class AddBlackListIPSearch extends BaseTest{
-	@Test
-	public void testAddBlackListIPSearch() {
+	@Test(description="添加黑名单-IP-搜索测试")
+	public void testAddBlackListIPSearch() throws IOException {
 		webtest.addWhiteListAccount();
 		webtest.testCloseSafety();
 		webtest.frontLogin("demo", "demo");

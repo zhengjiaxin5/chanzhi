@@ -1,6 +1,7 @@
 package com.webtest.core;
 
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.webtest.utils.Log;
+import com.webtest.utils.ReadProperties;
 /**
  * author:lihuanzhen
  
@@ -25,7 +27,7 @@ public class WebDriverEngine {
 	ElementFinder finder = null;
 	Actions action  =null;
 	
-	public void addWhiteListIP() throws UnknownHostException {
+	public void addWhiteListIP() throws IOException {
 		backgroundLogin("137554616","fcschalke04");
 		click("xpath=/html/body/div[1]/div[1]/div/ul/li[4]/a");
 		type("id=ip", InetAddress.getLocalHost().getHostAddress().toString());
@@ -33,7 +35,7 @@ public class WebDriverEngine {
 		click("id=submit");
 	}
 	
-	public void addWhiteListAccount() {
+	public void addWhiteListAccount() throws IOException {
 		backgroundLogin("137554616","fcschalke04");
 		click("xpath=/html/body/div[1]/div[1]/div/ul/li[4]/a");
 		type("id=account", "demo");
@@ -41,15 +43,19 @@ public class WebDriverEngine {
 		click("id=submit");
 	}
 
-	public void frontLogin(String account,String password) {
-		open("http://localhost/chanzhieps/www/index.php/user-login.html");
+	public void frontLogin(String account,String password) throws IOException {
+		ReadProperties u = new ReadProperties();
+		String url = u.getPropertyValue("front_url");
+		open("url");
 		type("id=account", account);
 		type("id=password", password);
 		click("id=submit");
 	}
 	
-	public void backgroundLogin(String account,String password) {
-		open("http://localhost/chanzhieps/www/admin.php?m=admin&f=index");
+	public void backgroundLogin(String account,String password) throws IOException {
+		ReadProperties u = new ReadProperties();
+		String url = u.getPropertyValue("base_url");
+		open("url");
 		type("xpath=//*[@id=\"account\"]", account);
 		type("xpath=//*[@id=\"password\"]", password);
 		click("id=submit");
@@ -58,7 +64,7 @@ public class WebDriverEngine {
 		click("xpath=//html/body/nav[2]/div[2]/ul[1]/li[4]/a");
 	}
 	
-	public void testCloseSafety() {
+	public void testCloseSafety() throws IOException {
 		backgroundLogin("137554616","fcschalke04");
 		click("xpath=/html/body/div[1]/div[2]/div/div[2]/form/table/tbody/tr[1]/td/label[3]");
 		click("xpath=//*[@id=\"checkEmail2\"]");

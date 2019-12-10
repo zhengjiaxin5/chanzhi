@@ -2,18 +2,23 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
 import java.net.UnknownHostException;
 
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.utils.ReadProperties;
 
 public class FilterAccountVerificationCode extends BaseTest{
-	@Test
-	public void testFilterAccountVerificationCode() throws UnknownHostException {
+	@Test(description="过滤-账号-验证码测试")
+	public void testFilterAccountVerificationCode() throws IOException {
 		webtest.addWhiteListIP();
-		//打开页面
-		webtest.open("http://localhost/chanzhieps/www/index.php/user-login.html");
+		//进入前台界面
+		ReadProperties u = new ReadProperties();
+		String url = u.getPropertyValue("front_url");
+		webtest.open("url");
+				
 		//循环输入账号密码和错误的验证码
 		for (int i = 0; i < 6; i++) {
 			webtest.type("account", "demo");

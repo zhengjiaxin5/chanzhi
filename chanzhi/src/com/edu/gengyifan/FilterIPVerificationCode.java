@@ -2,16 +2,21 @@ package com.edu.gengyifan;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+import com.webtest.utils.ReadProperties;
 
 public class FilterIPVerificationCode extends BaseTest{
-	@Test
-	public void testFilterIPVerificationCode() {
+	@Test(description="过滤-IP-验证码测试")
+	public void testFilterIPVerificationCode() throws IOException {
 		webtest.addWhiteListAccount();
 		//打开页面
-		webtest.open("http://localhost/chanzhieps/www/index.php/user-login.html");
+		ReadProperties u = new ReadProperties();
+		String url = u.getPropertyValue("front_url");
+		webtest.open("url");
 		//循环输入账号密码和错误的验证码
 		webtest.type("account", "demo");
 		webtest.type("password", "demo");
@@ -20,7 +25,7 @@ public class FilterIPVerificationCode extends BaseTest{
 			webtest.click("id=submit");
 		}
 		//循环输入账号密码和错误的验证码
-		webtest.open("http://localhost/chanzhieps/www/index.php/user-login.html");
+		webtest.open("url");
 		webtest.type("account", "demo0");
 		webtest.type("password", "demo");
 		webtest.type("xpath=/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[2]/form/div[4]", "1");
