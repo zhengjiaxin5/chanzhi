@@ -35,7 +35,7 @@ public class WhiteListAccountRegistered extends BaseTest{
 	}
 	@Test(priority=2,description="白名单-账号-注册测试2")
 	public void testAfterWhiteListAccountRegistered() throws IOException {
-		webtest.backgroundLogin("137554616", "fcschalke04");
+		webtest.backgroundLogin("admin", "admin");
 		assertFalse(webtest.isTextPresent("系统检测到您的行为存在异常"));
 	}
 }

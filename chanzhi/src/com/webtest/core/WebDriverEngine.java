@@ -28,18 +28,18 @@ public class WebDriverEngine {
 	Actions action  =null;
 	
 	public void addWhiteListIP() throws IOException {
-		backgroundLogin("137554616","fcschalke04");
+		backgroundLogin("admin","admin");
 		click("xpath=/html/body/div[1]/div[1]/div/ul/li[4]/a");
 		type("id=ip", InetAddress.getLocalHost().getHostAddress().toString());
-		type("id=password", "fcschalke04");
+		type("id=password", "admin");
 		click("id=submit");
 	}
 	
 	public void addWhiteListAccount() throws IOException {
-		backgroundLogin("137554616","fcschalke04");
+		backgroundLogin("admin","admin");
 		click("xpath=/html/body/div[1]/div[1]/div/ul/li[4]/a");
 		type("id=account", "demo");
-		type("id=password", "fcschalke04");
+		type("id=password", "admin");
 		click("id=submit");
 	}
 
@@ -65,7 +65,7 @@ public class WebDriverEngine {
 	}
 	
 	public void testCloseSafety() throws IOException {
-		backgroundLogin("137554616","fcschalke04");
+		backgroundLogin("admin","admin");
 		click("xpath=/html/body/div[1]/div[2]/div/div[2]/form/table/tbody/tr[1]/td/label[3]");
 		click("xpath=//*[@id=\"checkEmail2\"]");
 		click("xpath=/html/body/div[1]/div[2]/div/div[2]/form/table/tbody/tr[6]/td[1]/label[2]");

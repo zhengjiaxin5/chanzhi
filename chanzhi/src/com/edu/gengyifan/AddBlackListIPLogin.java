@@ -24,7 +24,7 @@ public class AddBlackListIPLogin extends BaseTest{
 		for(int i=0;i<11;i++) {
 			webtest.click("id=submit");
 		}
-		webtest.backgroundLogin("137554616", "fcschalke04");
+		webtest.backgroundLogin("admin", "admin");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[3]/a");
 		//鏂█
 		assertTrue(webtest.isTextPresent("系统检测到您的行为存在异常"));

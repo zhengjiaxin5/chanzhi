@@ -25,7 +25,7 @@ public class AddBlackListAccountLogin extends BaseTest {
 		for(int i=0;i<11;i++) {
 			webtest.click("id=submit");
 		}
-		webtest.backgroundLogin("137554616", "fcschalke04");
+		webtest.backgroundLogin("admin", "admin");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[3]/a");
 		//断言
 		assertTrue(webtest.isTextPresent("demo"));

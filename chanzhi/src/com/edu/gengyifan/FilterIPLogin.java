@@ -23,7 +23,7 @@ public class FilterIPLogin extends BaseTest{
 			webtest.click("id=submit");
 		}
 		//进入前台界面
-		webtest.open("http://localhost/chanzhieps/www/index.php/user-login.html");
+		webtest.open(url);
 		//循环登录
 		webtest.type("id=account", "demo0");
 		webtest.type("id=password", "demo0");

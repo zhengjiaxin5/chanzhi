@@ -13,7 +13,7 @@ public class WhiteListAccountLogin extends BaseTest{
 	@Test(description="白名单-账号-登录测试")
 	public void testWhiteListAccountLogin() throws IOException {
 		webtest.addWhiteListIP();
-		webtest.backgroundLogin("137554616", "fcschalke04");
+		webtest.backgroundLogin("admin", "admin");
 		webtest.click("id=filterFunction1");
 		webtest.click("id=submit");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[4]/a");

@@ -34,7 +34,7 @@ public class AddBlackListAccountRegistered extends BaseTest{
 	}
 	@Test(priority=2,description="添加黑名单-账号-注册测试2")
 	public void testAfterAddBlackListAccountRegistered() throws IOException {
-		webtest.backgroundLogin("137554616", "fcschalke04");
+		webtest.backgroundLogin("admin", "admin");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[3]/a");
 		//断言
 		assertTrue(webtest.isTextPresent("demo"));

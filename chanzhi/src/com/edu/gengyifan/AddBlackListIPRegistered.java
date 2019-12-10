@@ -34,7 +34,7 @@ public class AddBlackListIPRegistered extends BaseTest{
 	}
 	@Test(priority=2,description="添加黑名单-IP-注册测试2")
 	public void testAfterAddBlackListIPRegistered() throws IOException {
-		webtest.backgroundLogin("137554616", "fcschalke04");
+		webtest.backgroundLogin("admin", "admin");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[3]/a");
 		//断言
 		assertTrue(webtest.isTextPresent("系统检测到您的行为存在异常"));

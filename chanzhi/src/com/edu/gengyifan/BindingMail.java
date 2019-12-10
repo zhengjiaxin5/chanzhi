@@ -10,7 +10,7 @@ import com.webtest.core.BaseTest;
 public class BindingMail extends BaseTest{
 	@Test(description="会员邮箱绑定测试")
 	public void testBinDingMail() throws IOException {
-		webtest.frontLogin("demo","demo");
+		webtest.backgroundLogin("admin", "admin");
 		webtest.click("xpath=//*[@id=\"checkEmail1\"]");
 		webtest.click("xpath=//*[@id=\"submit\"]");	
 		webtest.frontLogin("demo","demo");

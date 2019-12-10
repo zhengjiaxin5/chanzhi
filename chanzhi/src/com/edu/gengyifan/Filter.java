@@ -11,7 +11,7 @@ import com.webtest.core.BaseTest;
 public class Filter extends BaseTest{
 	@Test(description="过滤器测试")
 	public void testFilter() throws IOException {
-		webtest.backgroundLogin("137554616", "fcschalke04");
+		webtest.backgroundLogin("admin", "admin");
 		webtest.click("xpath=//*[@id=\"filterFunction1\"]");
 		webtest.click("id=submit");
 		//断言
