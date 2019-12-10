@@ -21,7 +21,7 @@ public class shopcity extends Admin_Login{
 		return s;
 	}
 	@Test(description="商城产品下添加类目",priority=1,dataProvider="leimu")
-	public void test1(String name,String name1) throws IOException{
+	public void addshopleimu(String name,String name1) throws IOException{
 		this.testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -33,7 +33,7 @@ public class shopcity extends Admin_Login{
 		assertTrue(webtest.isTextPresent(name1));
 	}
 	@Test(description="删除四川风味",priority=2)
-	public void test18() throws IOException {
+	public void deletesichuan() throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -43,7 +43,7 @@ public class shopcity extends Admin_Login{
 		assertTrue(webtest.isTextPresent("四川风味"));
 	}
 	@Test(description="添加产品",priority=2)
-	public void test3() throws IOException {
+	public void addproduction() throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -62,7 +62,7 @@ public class shopcity extends Admin_Login{
 		
 	}
 	@Test(description="添加名称为空的产品",priority=2)
-	public void test31() throws IOException {
+	public void addprowithoutname() throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -81,7 +81,7 @@ public class shopcity extends Admin_Login{
 		
 	}
 	@Test(description="添加详情为空的产品",priority=2)
-	public void test32() throws IOException {
+	public void addprowoutdetail() throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -96,7 +96,7 @@ public class shopcity extends Admin_Login{
 		
 	}
 	@Test(description="将鸡爪下架",priority=3)
-	public void test4() throws IOException {
+	public void xiajiajizhua() throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -107,7 +107,7 @@ public class shopcity extends Admin_Login{
 		
 	}
 	@Test(description="将鸡爪上架",priority=4)
-	public void test5() throws IOException {
+	public void shangjiajizhua() throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -118,7 +118,7 @@ public class shopcity extends Admin_Login{
 		
 	}
 	@Test(description="搜索",priority=5)
-	public void test6() throws IOException {
+	public void findjizhua() throws IOException {
 		testLogin();
 		webtest.click1("xpath=//a[text()='商城']");
 		webtest.click1("xpath=//a[text()='产品']");
@@ -127,7 +127,7 @@ public class shopcity extends Admin_Login{
 		assertTrue(webtest.isTextPresent("鸡爪"));
 	}
 	@Test(description="将鸡爪的库存改为600",priority=6)
-	public void test7() throws IOException {
+	public void change1() throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -141,7 +141,7 @@ public class shopcity extends Admin_Login{
 		
 	}
 	@Test(description="将鸡爪的库存改为0.05",priority=7)
-	public void test8() throws InterruptedException, IOException {
+	public void change2() throws InterruptedException, IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -155,7 +155,7 @@ public class shopcity extends Admin_Login{
 		
 	}
 	@Test(description="将鸡爪的库存改为-600",priority=8)
-	public void test9() throws InterruptedException, IOException {
+	public void change3() throws InterruptedException, IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -169,7 +169,7 @@ public class shopcity extends Admin_Login{
 		
 	}
 	@Test(description="将鸡爪删除",priority=9)
-	public void test10() throws IOException {
+	public void deletejizhua() throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("link=产品");
@@ -185,7 +185,7 @@ public class shopcity extends Admin_Login{
 		return s;
 	}
 	@Test(description="添加快递",priority=10,dataProvider="name")
-	public void test11(String kuaidi,String kuaidi2) throws IOException {
+	public void addkuaidi(String kuaidi,String kuaidi2) throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
@@ -197,7 +197,7 @@ public class shopcity extends Admin_Login{
 		assertTrue(webtest.isTextPresent(kuaidi2));
 	}
 	@Test(description="删除百世快递",priority=11)
-	public void test12() throws IOException {
+	public void deletekuadi() throws IOException {
 		testLogin();
 		webtest.click1("link=商城");
 		webtest.click1("xpath=/html/body/nav[2]/div[2]/ul[1]/li[3]/a");
