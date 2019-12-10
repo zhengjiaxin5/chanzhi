@@ -13,7 +13,7 @@ import com.webtest.demo.Admin_Login;
 public class DelNav extends Admin_Login{
 
 	@Test(priority=1,description="添加导航")
-	public void test1() throws InterruptedException {
+	public void addNav() throws InterruptedException {
 		webtest.click("link=设计");
 		webtest.click("link=导航");
 		webtest.mouseoverElement("xpath=//*[@id=\"navList\"]/li[1]/span[1]");
@@ -24,7 +24,7 @@ public class DelNav extends Admin_Login{
 	}
 	
 	@Test(priority=2,description="删除导航")
-	public void test2() throws InterruptedException {
+	public void delNav() throws InterruptedException {
 		webtest.click("link=设计");
 		webtest.click("link=导航");
 		webtest.mouseoverElement("xpath=//*[@id=\"navList\"]/li[1]/span[1]");

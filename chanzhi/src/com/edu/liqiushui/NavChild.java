@@ -14,7 +14,7 @@ public class NavChild extends Admin_Login{
 
 	//添加一个导航a
 	@Test(priority=1,description="先添加一个导航")
-	public void test1() throws InterruptedException {
+	public void addnav1() throws InterruptedException {
 		webtest.click("link=设计");
 		webtest.click("link=导航");
 		webtest.mouseoverElement("xpath=//*[@id=\"navList\"]/li[1]/span[1]");
@@ -26,7 +26,7 @@ public class NavChild extends Admin_Login{
 	}
 	//添加子导航
 	@Test(priority=2,description="添加子导航")
-	public void test2() throws InterruptedException {
+	public void addchild() throws InterruptedException {
 		webtest.mouseoverElement("xpath=//*[@id=\"navList\"]/li[2]/span[1]");
 		webtest.click("xpath=//*[@id=\"navList\"]/li[2]/span[1]/span/a[4]/i");
 		Thread.sleep(5000);
