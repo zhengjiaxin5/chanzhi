@@ -12,7 +12,7 @@ public class AddBlackListIPPostReplay extends BaseTest{
 	@Test(description="添加黑名单-IP-回帖测试")
 	public void testAddBlackListIPPostReplay() throws IOException {
 		webtest.addWhiteListAccount();
-		webtest.frontLogin("demo", "demo");
+		webtest.frontLogin("demo12345", "demo12345");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/div/table/tbody/tr[1]/td[1]/a");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a");
 		for(int i=0;i<6;i++) {

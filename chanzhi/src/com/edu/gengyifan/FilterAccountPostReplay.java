@@ -13,7 +13,7 @@ public class FilterAccountPostReplay extends BaseTest{
 	@Test(description="过滤-账号-回帖测试")
 	public void testFilterAccountLogin() throws IOException {
 		webtest.addWhiteListIP();
-		webtest.frontLogin("demo","demo");
+		webtest.frontLogin("demo12345","demo12345");
 		webtest.click("link=论坛");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/div/table/tbody/tr[1]/td[1]/a");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a");

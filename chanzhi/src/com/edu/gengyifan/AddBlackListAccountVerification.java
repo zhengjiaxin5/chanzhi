@@ -16,7 +16,7 @@ public class AddBlackListAccountVerification extends BaseTest{
 		webtest.backgroundLogin("admin", "admin");
 		webtest.click("id=captcha1");
 		webtest.click("id=submit");
-		webtest.type("id=account", "demo");
+		webtest.type("id=account", "demo12345");
 		webtest.type("id=password", "demo0");
 		webtest.type("xpath=/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[2]/form/div[4]", "1");
 		for (int i = 0; i < 6; i++) {
@@ -26,6 +26,6 @@ public class AddBlackListAccountVerification extends BaseTest{
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[3]/a");
 		
 		//断言
-		assertTrue(webtest.isTextPresent("demo"));
+		assertTrue(webtest.isTextPresent("demo12345"));
 	}
 }

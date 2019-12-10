@@ -18,16 +18,16 @@ public class FilterIPVerificationCode extends BaseTest{
 		String url = u.getPropertyValue("front_url");
 		webtest.open("url");
 		//循环输入账号密码和错误的验证码
-		webtest.type("account", "demo");
-		webtest.type("password", "demo");
+		webtest.type("account", "demo12345");
+		webtest.type("password", "demo12345");
 		webtest.type("xpath=/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[2]/form/div[4]", "1");
 		for (int i = 0; i < 4; i++) {
 			webtest.click("id=submit");
 		}
 		//循环输入账号密码和错误的验证码
 		webtest.open("url");
-		webtest.type("account", "demo0");
-		webtest.type("password", "demo");
+		webtest.type("account", "demo123456");
+		webtest.type("password", "demo123456");
 		webtest.type("xpath=/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[2]/form/div[4]", "1");
 		for (int i = 0; i < 2; i++) {
 			webtest.click("id=submit");

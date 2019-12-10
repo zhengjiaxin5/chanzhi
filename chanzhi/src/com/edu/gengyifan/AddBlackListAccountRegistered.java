@@ -37,6 +37,6 @@ public class AddBlackListAccountRegistered extends BaseTest{
 		webtest.backgroundLogin("admin", "admin");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[3]/a");
 		//断言
-		assertTrue(webtest.isTextPresent("demo"));
+		assertTrue(webtest.isTextPresent("系统检测到您的行为存在异常\""));
 	}
 }

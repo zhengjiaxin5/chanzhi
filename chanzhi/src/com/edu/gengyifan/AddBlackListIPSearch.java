@@ -13,7 +13,7 @@ public class AddBlackListIPSearch extends BaseTest{
 	public void testAddBlackListIPSearch() throws IOException {
 		webtest.addWhiteListAccount();
 		webtest.testCloseSafety();
-		webtest.frontLogin("demo", "demo");
+		webtest.frontLogin("demo12345", "demo12345");
 		for (int i = 0; i < 11; i++) {
 			webtest.type("id=words", "1");
 		}

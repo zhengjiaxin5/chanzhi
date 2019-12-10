@@ -12,12 +12,12 @@ public class FilterIPSearch extends BaseTest{
 	@Test(description="过滤-IP-搜索测试")
 	public void testFilterIPSearch() throws IOException {
 		webtest.addWhiteListAccount();
-		webtest.frontLogin("demo","demo");
+		webtest.frontLogin("demo12345","demo12345");
 		for(int i=0;i<9;i++) {
 			webtest.type("id=words", "1");
 		}
 		webtest.click("xpath=/html/body/div[1]/div[1]/div/header/div[1]/div/nav/a[2]");
-		webtest.frontLogin("demo0","demo");
+		webtest.frontLogin("demo123456","demo123456");
 		for(int i=0;i<2;i++) {
 			webtest.type("id=words", "1");
 		}

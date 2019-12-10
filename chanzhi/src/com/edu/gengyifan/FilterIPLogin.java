@@ -17,7 +17,7 @@ public class FilterIPLogin extends BaseTest{
 		String url = u.getPropertyValue("front_url");
 		webtest.open("url");
 		//循环登录
-		webtest.type("id=account", "demo");
+		webtest.type("id=account", "demo12345");
 		webtest.type("id=password", "demo0");
 		for(int i=0;i<9;i++) {
 			webtest.click("id=submit");
@@ -25,7 +25,7 @@ public class FilterIPLogin extends BaseTest{
 		//进入前台界面
 		webtest.open(url);
 		//循环登录
-		webtest.type("id=account", "demo0");
+		webtest.type("id=account", "demo123456");
 		webtest.type("id=password", "demo0");
 		for(int i=0;i<2;i++) {
 			webtest.click("id=submit");

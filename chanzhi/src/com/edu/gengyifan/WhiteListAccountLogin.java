@@ -17,16 +17,16 @@ public class WhiteListAccountLogin extends BaseTest{
 		webtest.click("id=filterFunction1");
 		webtest.click("id=submit");
 		webtest.click("xpath=/html/body/div/div[1]/div/ul/li[4]/a");
-		webtest.type("id=account", "demo");
-		webtest.type("id=password", "fcschalke04");
+		webtest.type("id=account", "demo12345");
+		webtest.type("id=password", "admin");
 		webtest.click("id=submit");
 		for (int i = 0; i < 11; i++) {
-			webtest.type("id=account", "demo");
+			webtest.type("id=account", "demo123456");
 			webtest.type("id=password", "demo0");
 			webtest.click("id=submit");
 		}
-		webtest.type("id=account", "demo");
-		webtest.type("id=password", "demo");
+		webtest.type("id=account", "demo12345");
+		webtest.type("id=password", "demo12345");
 		webtest.click("id=submit");
 		assertFalse(webtest.isTextPresent("系统检测到您的行为存在异常"));
 	}

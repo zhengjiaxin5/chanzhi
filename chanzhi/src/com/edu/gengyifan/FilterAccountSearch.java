@@ -14,7 +14,7 @@ public class FilterAccountSearch extends BaseTest{
 	@Test(description="过滤-账号-搜索测试")
 	public void testFilterAccountSearch() throws IOException {
 		webtest.addWhiteListIP();
-		webtest.frontLogin("demo","demo");
+		webtest.frontLogin("demo12345","demo12345");
 		for(int i=0;i<11;i++) {
 		webtest.type("id=words", "1");
 		}

@@ -13,7 +13,7 @@ public class BindingMail extends BaseTest{
 		webtest.backgroundLogin("admin", "admin");
 		webtest.click("xpath=//*[@id=\"checkEmail1\"]");
 		webtest.click("xpath=//*[@id=\"submit\"]");	
-		webtest.frontLogin("demo","demo");
+		webtest.frontLogin("demo12345","demo12345");
 		webtest.click("xpath=/html/body/div[1]/div[1]/div/header/div[1]/div/nav/a[1]");//点击用户
 		//断言
 		assertEquals(webtest.isDisplayed("xpath=//*[@id=\"checkEmail\"]",true),"ture");

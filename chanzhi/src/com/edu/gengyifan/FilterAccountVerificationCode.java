@@ -20,8 +20,8 @@ public class FilterAccountVerificationCode extends BaseTest{
 		webtest.open("url");
 				
 		//循环输入账号密码和错误的验证码
-		webtest.type("account", "demo");
-		webtest.type("password", "demo");
+		webtest.type("account", "demo12345");
+		webtest.type("password", "demo12345");
 		for (int i = 0; i < 6; i++) {
 			webtest.type("xpath=/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[2]/form/div[4]", "1");
 			webtest.click("id=submit");

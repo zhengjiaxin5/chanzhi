@@ -19,7 +19,7 @@ public class FilterAccountLogin extends BaseTest{
 		String url = u.getPropertyValue("front_url");
 		webtest.open("url");
 		//循环登录
-		webtest.type("id=account", "demo");
+		webtest.type("id=account", "demo12345");
 		webtest.type("id=password", "demo0");
 		for(int i=0;i<11;i++) {
 			webtest.click("id=submit");

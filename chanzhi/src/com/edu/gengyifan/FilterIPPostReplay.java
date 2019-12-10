@@ -12,7 +12,7 @@ public class FilterIPPostReplay extends BaseTest{
 	@Test(description="过滤-IP-回帖测试")
 	public void testFilterIPPostReplay() throws IOException {
 		webtest.addWhiteListAccount();
-		webtest.frontLogin("demo","demo");
+		webtest.frontLogin("demo12345","demo12345");
 		webtest.click("link=论坛");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/div/table/tbody/tr[1]/td[1]/a");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a");
@@ -25,7 +25,7 @@ public class FilterIPPostReplay extends BaseTest{
 			webtest.click("id=submit");
 		}
 		webtest.click("xpath=/html/body/div[1]/div[1]/div/header/div[1]/div/nav/a[2]");
-		webtest.frontLogin("demo","demo");
+		webtest.frontLogin("demo123456","demo123456");
 		webtest.click("link=论坛");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/div/table/tbody/tr[1]/td[1]/a");
 		webtest.click("xpath=/html/body/div[1]/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a");
